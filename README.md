@@ -67,4 +67,35 @@ User goals are:
 - Functionality to add new questions to ask visitors and contractors as legislation changes.
 
 ## Business Goals
-Business goals are:
+
+The target businesses to use this application are:
+
+- Bakeries
+- Food & drink manufacturers
+
+Business user goals are:
+
+- A well thought out, designed, user friendly platform that will benefit customers who need compliance.
+
+- A user interface that allows me to input the data efficiently.
+
+- Value for money (site is for a project, but eventually i will use this as part of my new business). I want the software to exceed requirements for the user as word of mouth spreads fast
+in the food industry in scotland.
+
+## Developer Goals
+
+Developer goals are:
+
+- Provide an effective, easy to use site for customers to add new visitors to there premises, ensure they have completed the compliance checks and data stored in the database correctly.
+
+- I can learn more about frontend and backend technologies together for the first time.
+
+- This is currently a student project although the future goal of traceVMS is to eventually sell it to manufacturers to use on there sites. This will come later when my experience in development gets better.
+
+## User Requirements & Expectations
+
+
+
+
+
+
