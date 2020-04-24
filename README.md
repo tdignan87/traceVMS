@@ -14,7 +14,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 <h3>Table of Contents</h3>
 
-* 1.UX
+# 1.UX
 *   Project Goals
 *   User Goals
 *   Business Goals
@@ -25,7 +25,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 * Flow Chart
 * Backgrounds
 
-* 2.Features
+# 2.Features
 *   Existing Features
     * Register Visitor Page
     * Admin page
@@ -34,15 +34,15 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 *   Features Deployed
 *   Features Left To Implement
 
-* 3.Information Architechture
+# 3.Information Architechture
 * Database Choice
 * Data Storage Types
 * Collections Data Structure
     * User Collection
     * Activities Collection
 
-* 4.Technologies Used
+# 4.Technologies Used
 
 
-* 5.Testing
+# 5.Testing
 
