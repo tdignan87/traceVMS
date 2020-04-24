@@ -5,7 +5,7 @@
 <h1>TraceVMS Visitor & Contractor Management System</h1>
 </div>
 
-<h2>Introduction</h2>
+## Introduction
 
 TraceVMS was created by myself as I noticed through my day job that most factories and food companies use paper based systems for recording visitors to the site.
 I can see the headache of paper based systems from working in the manufacturing industry for over 10 years. TraceVMS hopes to help with that problem by recording visitor and contractor information to help with record keeping, reduce paperwork and adhere to food safety compliance(BRC).
@@ -44,3 +44,27 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 4. [Technologies Used](#technologies-used)
 
 5. [Testing](#testing)
+
+----
+
+# UX
+
+## Project Goals
+
+The goal of this project is to create a suitable, easy to use application for recording visitors and contractors to your site. The software is aimed at food manufacturers specifically designed to help them be compliant with contractor management and also health and safety requirements. The system's focus will be ease of use for data input and data retrieve.
+
+## User Goals
+User goals are:
+
+- Have a system for recording visitors to my site so i can remove paperwork records.
+
+- Have confidence in the system so it keeps us compliant with food safety requirements.
+
+- Ease of use and can be used across any device.
+
+- Secure so data is compliant with GDPR.
+
+- Functionality to add new questions to ask visitors and contractors as legislation changes.
+
+## Business Goals
+Business goals are:
