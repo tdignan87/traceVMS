@@ -14,15 +14,35 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 <h3>Table of Contents</h3>
 
-. [UX]
-    - [Goals]
-        - [Visitor Goals]
-        - [Business Goals]
-        - [Family Hub Goals]
-    - [User Stories]
-        - [Visitor Stories]
-        - [Business Stories]
-    - [Design Choices]
-    - [Wireframes]
-    - [Flowchart]
-    - [PDF]
+* 1.UX
+*   Project Goals
+*   User Goals
+*   Business Goals
+*   Developer Goals
+*   User Requirements and Expectations
+    * Design Choices
+* Wireframes
+* Flow Chart
+* Backgrounds
+
+* 2.Features
+*   Existing Features
+    * Register Visitor Page
+    * Admin page
+    * About page
+    * Admin login page
+*   Features Deployed
+*   Features Left To Implement
+
+* 3.Information Architechture
+* Database Choice
+* Data Storage Types
+* Collections Data Structure
+    * User Collection
+    * Activities Collection
+
+* 4.Technologies Used
+
+
+* 5.Testing
+
