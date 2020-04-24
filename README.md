@@ -14,7 +14,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 <h3>Table of Contents</h3>
 
-# 1.UX
+<h5>1.UX</h5>
 *   Project Goals
 *   User Goals
 *   Business Goals
