@@ -12,31 +12,7 @@ I can see the headache of paper based systems from working in the manufacturing 
 
 Tracesense is my own company i created in November 2019 and decided to go with that name for the software.
 
-<h3>Table of Contents</h3>
-
-
-<h3>2.Features</h3>
-*   Existing Features
-    * Register Visitor Page
-    * Admin page
-    * About page
-    * Admin login page
-*   Features Deployed
-*   Features Left To Implement
-
-<h3>3.Information Architechture</h3>
-* Database Choice
-* Data Storage Types
-* Collections Data Structure
-    * User Collection
-    * Activities Collection
-
-<h3>4.Technologies Used</h3>
-
-
-<h3>5.Testing</h3>
-
-# Table of Contents
+## Table of Contents
 1. [UX](#example)
     - [Project Goals](#example2)
     - [User Goals](#third-example)
