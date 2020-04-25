@@ -94,8 +94,41 @@ Developer goals are:
 
 ## User Requirements & Expectations
 
+### Customer Stories
+
+As a customer to traceVMS i expect/want/need:
+
+1. To easily navigate across the application, the layout needs to make sense so i'm not put off from using the system and just stick to paper.
+
+2. The information presented needs to be in a practical way for me to digest and follow easily. I need to be able to use the app quickly and efficiently as contractors may not have a lot of time at the customers site.
+
+3. I need to have sufficient confidence in the system so i can remove paperwork from my processes. The system needs to tick the box for storing the data, and for us to retrieve it if we get audited from the BRC or Health and Safety executive. 
+
+4.To use the administrator set up panel to be able to filter out on who is approved, not approved contractor and any other key information required.
+
+5.I want to be able to search for users who have completed the site induction.
+
+6. I want to be able to search for a list of everyone who is currently on site in case this needs to be printed in used in a fire evacuation emergency. I need to be able to print the list from the browser of the names of people on site. 
+
+7. I want to be able to access data easily and within the 4 hour maximum BRC timeframe for retrieving company audit data.
+
+### Developer Stories
+
+As the developer and owner of traceVMS i expect/want:
+
+1. To be able to create, delete, update, and read information to the database.
+
+2. Allow customers to find the application easy to use.
+
+3. The software helps and improves compliance.
+
+4. For secure login to the administrator panel to amend the lists.
+
+5. The data is secure and complies with GDPR for the customer.
+
+6. The system is reliable for use and gives confidence the customer can remove the paperwork.
 
 
-
+## Design Choices
 
 
