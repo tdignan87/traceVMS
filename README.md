@@ -136,16 +136,17 @@ As the developer and owner of traceVMS i expect/want:
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the scope part of the design and planning process for this project. I found Balsamiq very useful for helping me plan out exactly what i needed for my application to come together.
 
+Links to be updated
 - [Browser Home Page](https://ibb.co/52Z3P4r)
 - [Browser Visitor Sign In Page](https://ibb.co/Wcgbtqs)
 - [Browser Visitor Sign Out Page](https://ibb.co/Nm8FYbd)
-- [Browser Administrator Set Up Page](https://ibb.co/PMb9jCm)
-- [Browser Add New Company Page](https://ibb.co/MR8BFC3)
+- [Browser Administrator Set Up Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Administrator%20Set%20Up.png)
+- [Browser Add New Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Add%20New%20Company.png)
 - [Browser Edit Company Page](https://ibb.co/njnP5C5)
 - [Browser Delete Company Page](https://ibb.co/1TyV9sN)
-- [Browser Add Questions Page](https://ibb.co/yhbBSV0)
+- [Browser Add Questions Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Add%20New%20Question.png)
 - [Browser Edit Questions Page](https://ibb.co/nr2s9cw)
-- [Browser Delete Questions Page](https://ibb.co/Wv349RB)
+- [Browser Delete Questions Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Delete%20Questions.png)
 - [Mobile Home Page](https://ibb.co/sqj60xb)
 - [Mobile Visitor Sign In Page](https://ibb.co/sqj60xb)
 - [Mobile Visitor Sign Out Page](https://ibb.co/sqj60xb)
@@ -170,4 +171,33 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 - [Tablet Delete Page](https://ibb.co/sqj60xb)
 
 
+## Information Architecture
 
+### Database Choice
+
+A SQL database structure i think would have been more suitable for this project however the requirements were to use mongoDB. I have experience with Firebird, and SQL server already so i'm looking forward to learning more about MongoDB and gain some experience with it.
+
+To have easy access to relational data, inner objects were used inside the data structure so that they could be accessed and looped through for combo boxes and where else required.
+
+### Data Storage Types
+
+The types of data stored in MongoDB for this project are:
+- ObjectId
+- String
+- Boolean
+- DateTime
+
+
+### Collections Data Structure
+
+TraceVMS relies on the following structure
+
+#### Administrator login
+
+| Title | Key in db | form validation type | Data type |
+--- | --- | --- | --- 
+Account ID | _id | None | ObjectId 
+Name | username | text, `maxlength="40"` | string
+Password | password | text, `maxlength="15"` | string
+
+#### 
