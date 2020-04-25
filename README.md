@@ -196,15 +196,33 @@ TraceVMS relies on the following structure
 
 | Title | Key in db | form validation type | Data type |
 --- | --- | --- | --- 
-Account ID | _id | None | ObjectId 
+AccountID | _id | None | ObjectId 
 Name | username | text, `maxlength="40"` | string
 Password | password | text, `maxlength="15"` | string
 
 #### Visitors On Site
 
-|Title | key in db| validation type| data type|
+|Title | Key in db| form validation type| data type |
 --- | --- | --- | ---
 visitorsID | _id | none | ObjectId
 Name | name | text, maxlength="100"| string
 Induction | induction | checkbox | boolean
 Company | company | maxlength=150" | string
+
+#### Contractors
+
+|Title| Key in db | form validation type | data type |
+--- | --- | --- | ---
+contractorID | _id | none | ObjectId
+Name| companyName| text, maxlength="150"|string 
+Liability Insurance Date Renewal | libRenewal| timepicker | datetime
+Policy statement | polStatement | timepicker | datetime
+Approved| isApproved| checkbox | boolean
+
+#### Questions
+
+|Title| Key in db| form validation type| data type |
+--- | --- | --- | ---
+questionID | _id| none | Objectid
+Question| question | text, maxlength= "200" | string
+Answer | answer| text, maxlength="5" | string
