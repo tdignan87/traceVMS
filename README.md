@@ -22,7 +22,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
         - [Design Choices](#user-stories)
     - [WireFrames](#wireframes)
     - [Flow Chart](#flow)
-    - [Backgrounds](#background)
+    
 
 2. [Features](#example)
     - [Existing Features](#background)
