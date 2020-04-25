@@ -200,4 +200,11 @@ Account ID | _id | None | ObjectId
 Name | username | text, `maxlength="40"` | string
 Password | password | text, `maxlength="15"` | string
 
-#### 
+#### Visitors On Site
+
+|Title | key in db| validation type| data type|
+--- | --- | --- | ---
+visitorsID | _id | none | ObjectId
+Name | name | text, maxlength="100"| string
+Induction | induction | checkbox | boolean
+Company | company | maxlength=150" | string
