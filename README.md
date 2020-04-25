@@ -132,3 +132,42 @@ As the developer and owner of traceVMS i expect/want:
 ## Design Choices
 
 
+## Wireframes
+
+These wireframes were created using [Balsamiq](https://balsamiq.com/) during the scope part of the design and planning process for this project. I found Balsamiq very useful for helping me plan out exactly what i needed for my application to come together.
+
+- [Browser Home Page](https://ibb.co/52Z3P4r)
+- [Browser Visitor Sign In Page](https://ibb.co/Wcgbtqs)
+- [Browser Visitor Sign Out Page](https://ibb.co/Nm8FYbd)
+- [Browser Administrator Set Up Page](https://ibb.co/PMb9jCm)
+- [Browser Add New Company Page](https://ibb.co/MR8BFC3)
+- [Browser Edit Company Page](https://ibb.co/njnP5C5)
+- [Browser Delete Company Page](https://ibb.co/1TyV9sN)
+- [Browser Add Questions Page](https://ibb.co/yhbBSV0)
+- [Browser Edit Questions Page](https://ibb.co/nr2s9cw)
+- [Browser Delete Questions Page](https://ibb.co/Wv349RB)
+- [Mobile Home Page](https://ibb.co/sqj60xb)
+- [Mobile Visitor Sign In Page](https://ibb.co/sqj60xb)
+- [Mobile Visitor Sign Out Page](https://ibb.co/sqj60xb)
+- [Mobile Admin Set Up Page](https://ibb.co/sqj60xb)
+- [Mobile Visitor Edit Page](https://ibb.co/sqj60xb)
+- [Mobile Visitor Delete Page](https://ibb.co/sqj60xb)
+- [Mobile Company Add New](https://ibb.co/sqj60xb)
+- [Mobile Company Edit](https://ibb.co/sqj60xb)
+- [Mobile Company Delete](https://ibb.co/sqj60xb)
+- [Mobile Questions Add New](https://ibb.co/sqj60xb)
+- [Mobile Questions Edit](https://ibb.co/sqj60xb)
+- [Mobile Questions Delete](https://ibb.co/sqj60xb)
+- [Tablet Home Page](https://ibb.co/sqj60xb)
+- [Tablet Visitor Sign In Page](https://ibb.co/sqj60xb)
+- [Tablet Visitor Sign Out Page](https://ibb.co/sqj60xb)
+- [Tablet Administrator Page](https://ibb.co/sqj60xb)
+- [Tablet Add New Company Page](https://ibb.co/sqj60xb)
+- [Tablet Edit Company Page](https://ibb.co/sqj60xb)
+- [Tablet Delete Company Page](https://ibb.co/sqj60xb)
+- [Tablet Add New Visitor Page](https://ibb.co/sqj60xb)
+- [Tablet Edit Visitor Page](https://ibb.co/sqj60xb)
+- [Tablet Delete Page](https://ibb.co/sqj60xb)
+
+
+
