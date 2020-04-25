@@ -170,6 +170,12 @@ Links to be updated
 - [Tablet Edit Visitor Page](https://ibb.co/sqj60xb)
 - [Tablet Delete Page](https://ibb.co/sqj60xb)
 
+## Flow Chart
+
+This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.
+- [traceVMS flow chart](https://ibb.co/sqj60xb)
+
+
 
 ## Information Architecture
 
