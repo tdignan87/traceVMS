@@ -173,7 +173,7 @@ Links to be updated
 ## Flow Chart
 
 This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.
-- [traceVMS flow chart](https://ibb.co/sqj60xb)
+- [traceVMS flow chart](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/flowchart.jpg = 100x200)
 
 
 
