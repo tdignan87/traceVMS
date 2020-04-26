@@ -131,6 +131,28 @@ As the developer and owner of traceVMS i expect/want:
 
 ## Design Choices
 
+traceVMS application has a professional feel that doesnt look too over complicated for the user. The following design choices were made:
+
+### Fonts
+
+* The google font applied across the whole application was 'lato' with a fall back of sans-serif. Lato feels very modest and text sizes look great either large or small. The font is easily recognizable.
+
+
+### Colours
+
+* The colors for this project were choosen based on the two primary colours in my company logo. These colours are
+
+1. Dark Blue: CMYK 100,50,10,0; RGB 0,105,68; HEX #0069A8
+2.Light Blue: CMYK 65,0,10,0; RGB 66,191,224; HEX #42BFE0
+
+The Dark Blue #0069A8 was used for button controls and blended well with etiher the lighter blue background or the white background depending where it was placed. The light blue was my jumbotron's background colior and background colour for the menu choices option. 
+
+I feel the colours i have chosen have complimented eachother well and blend well with the company logo.
+
+
+
+
+
 
 ## Wireframes
 
