@@ -1,43 +1,60 @@
-        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-        body {
-            font-family: 'Lato', sans-serif;
-        }
-        
-        .navbar-admin {
-            background-color: #4b4848;
-            padding-top: 3rem;
-            color: #fafafa;
-        }
-        
-        .jumbotron {
-            background-image: url("/static/img/visitorSystemOne.png");
-            height: 300px;
-            background-repeat: no-repeat;
-            background-size: auto 100%;
-            border-bottom: 1px solid;
-            background-color: #42BFE0;
-        }
-        
-        .display-4 {
-            float: right;
-        }
-        
-        .lead {
-            float: right;
-        }
-        
-        #option-text {
-            text-align: center;
-            vertical-align: middle;
-            background-color: #42BFE0;
-        }
-        
-        .navbar-brand img {
-            height: 100%;
-            margin-right: 20px;
-            float: right;
-        }
-        
-        #support-contact {
-            padding-top: 2rem;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.navbar-admin {
+    background-color: #4b4848;
+    padding-top: 3rem;
+    color: #fafafa;
+}
+
+.jumbotron {
+    background-image: url("/static/img/visitorSystemOne.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-bottom: 1px solid;
+    background-color: #42BFE0;
+}
+
+.display-4 {
+    float: right;
+}
+
+.lead {
+    float: right;
+}
+
+#option-text {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #42BFE0;
+}
+
+.navbar-brand img {
+    height: 100%;
+    margin-right: 20px;
+    float: right;
+}
+
+#support-contact {
+    padding-top: 2rem;
+}
+
+#admin-contain {
+    background-color: #42BFE0;
+    padding-bottom: 2rem;
+}
+
+.header-title {
+    text-align: center;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #0069A8;
+}
