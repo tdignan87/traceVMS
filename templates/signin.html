@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+
+<body>
+
+
+    <section class="container" id="sign-in-container">
+        <div class="company-logo-header">
+            <h2>Logo</h2>
+        </div>
+        <h2 id="sign-in-header">Welcome !</h2>
+        <h3 id="sign-in-secondary">Please complete the form below to sign in.</h3>
+        <form>
+            <div class="form-group row" id="name-section">
+                <label for="colFormLabel" class="col-form-label">Please enter your name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3">
+                </div>
+            </div>
+
+            <label for="dropdown" class="dropdown-company">Please select your company from dropdown:</label>
+            <select class="form-control">
+                <option>Richmack Markings</option>
+                <option>Stevens Traceability</option>
+              </select>
+            <div class="warning-text">
+                <h5>If your company is not the list then please speak to your company representative.</h5>
+            </div>
+            <div class="form-group row" id="name-section">
+                <label for="colFormLabel" class="col-form-label">Who are you visiting?</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3">
+                </div>
+            </div>
+            <fieldset class="form-group">
+                <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Visiting Bakery?</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                            <label class="form-check-label" for="gridRadios1">
+                  Yes
+                </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                            <label class="form-check-label" for="gridRadios2">
+                  No
+                </label>
+
+                        </div>
+            </fieldset>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+</html>
