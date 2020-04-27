@@ -149,11 +149,6 @@ The Dark Blue #0069A8 was used for button controls and blended well with etiher 
 
 I feel the colours i have chosen have complimented eachother well and blend well with the company logo.
 
-
-
-
-
-
 ## Wireframes
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the scope part of the design and planning process for this project. I found Balsamiq very useful for helping me plan out exactly what i needed for my application to come together.
@@ -197,7 +192,7 @@ Links to be updated
 This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.
 <img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/flowchart.jpg" target="_blank" rel=""/>
 
-
+## Features
 
 ## Information Architecture
 
