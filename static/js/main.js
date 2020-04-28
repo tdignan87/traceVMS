@@ -7,6 +7,7 @@ window.onload = function() {
     $("#contractor-section").hide();
     $("#visit-only-btn").hide();
     $("#confirmation-container").hide();
+
 }
 
 /**
@@ -15,7 +16,7 @@ window.onload = function() {
 
 $('input:radio[name="gridRadios"]').change(
     function() {
-        if (this.checked && this.value == 'yesOption') {
+        if (this.checked && this.value == 'true') {
             $("#questionaire-set").show();
             $("#contractor-section").show();
             $("#visit-only-btn").hide();
