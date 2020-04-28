@@ -14,7 +14,8 @@
 
         <label for="dropdown" class="dropdown-company" name="visitorCompany">Please select your company from dropdown:</label>
         <select class="form-control" name="visitorCompany">
-                <option>Richmack Markings</option>
+                <option disabled selected value></option>
+            <option>Richmack Markings</option>
                 <option>Stevens Traceability</option>
               </select>
         <div class="warning-text">
@@ -57,7 +58,7 @@
 </section>
 
 
-<section class="container " id="questionaire-set ">
+<section class="container " id="questionaire-set">
     <h3 class="header-pointers ">Site visitor & contractor questionnaire</h3>
     <div class="form-group ">
         <label for="exampleFormControlSelect1 " class="header-pointers ">Within the last 3 days have you suffered from vomiting or diarrhoea?</label>
@@ -137,7 +138,7 @@
 </div>
 
 
-<div class="card " id="contractor-section ">
+<div class="card " id="contractor-section">
     <div class="card-body ">
         <h3 class="header-pointers ">Contractors:</h3>
         <p> All contractors carrying out work on this site shall take every precaution to reduce, as far as reasonabily practical, the risk of food contamination and cross contamination of allergens used on site. Every precaution shall be taken to prevent
@@ -173,34 +174,32 @@
     </div>
 </div>
 
-<section class="container " id="confirmation-container ">
-    <div class="form-group form-check ">
-        <input type="checkbox " class="form-check-input " id="exampleCheck1 ">
-        <label class="form-check-label " for="exampleCheck1 ">Please check to acknlowedge you have read the above company rules.</label>
-    </div>
-    <div class="form-group row " id="name-section ">
-        <label for="inputNameSecond " class="col-form-label ">Please enter your name:</label>
-        <div class="col-sm-10 ">
-            <input type="text " class="form-control " id="inputNameSecond ">
+<section class="container " id="confirmation-container">
+    <form>
+        <div class="form-group row " id="name-section ">
+            <label for="inputNameSecond " class="col-form-label ">Please enter your name:</label>
+            <div class="col-sm-10 ">
+                <input type="text " class="form-control " id="inputNameSecond ">
+            </div>
         </div>
-    </div>
-    <div class="form-group row " id="name-section ">
-        <label for="inputDateTime " class="col-form-label ">Please select date & time</label>
-        <div class="col-sm-10 ">
-            <input type="text " class="form-control " id="inputDateTime ">
+        <div class="form-group row " id="name-section ">
+            <label for="inputDateTime " class="col-form-label ">Please select date & time</label>
+            <div class="col-sm-10 ">
+                <input type="text " class="form-control " id="inputDateTime ">
+            </div>
         </div>
-    </div>
-    <div class="form-group row " id="name-section ">
-        <label for="signNameFirst " class="col-form-label ">Company employee sign(ID Checked?)</label>
-        <div class="col-sm-12 ">
-            <input type="text " class="form-control " id="signNameFirst ">
+        <div class="form-group row " id="name-section ">
+            <label for="signNameFirst " class="col-form-label ">Company employee sign(ID Checked?)</label>
+            <div class="col-sm-12 ">
+                <input type="text " class="form-control " id="signNameFirst ">
+            </div>
         </div>
-    </div>
-    <div class="form-group row ">
-        <div class="col-sm-12 ">
-            <button type="submit " class="btn btn-primary ">Sign in</button>
+        <div class="form-group row ">
+            <div class="col-sm-12 ">
+                <button type="submit " class="btn btn-primary">Sign in</button>
+            </div>
         </div>
-    </div>
+    </form>
 </section>
 
 {% endblock %}
