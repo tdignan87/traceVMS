@@ -5,17 +5,18 @@
 window.onload = function() {
     $("#questionaire-set").hide();
     $("#contractor-section").hide();
-
+    $("#visit-only-btn").hide();
 }
 
 $('input:radio[name="gridRadios"]').change(
     function() {
         if (this.checked && this.value == 'yesOption') {
-            console.log("yes selected");
             $("#questionaire-set").show();
             $("#contractor-section").show();
+            $("#visit-only-btn").hide();
         } else {
             $("#questionaire-set").hide();
             $("#contractor-section").hide();
+            $("#visit-only-btn").show();
         }
     });

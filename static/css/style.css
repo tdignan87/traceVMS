@@ -5,7 +5,8 @@ body {
 
 .navbar-admin {
     background-color: #4b4848;
-    padding-top: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     color: #fafafa;
 }
 
@@ -117,5 +118,9 @@ body {
     background-color: #42BFE0;
     padding-top: 2rem;
     padding-bottom: 1rem;
+    text-align: center;
+}
+
+.header-pointers {
     text-align: center;
 }

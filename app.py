@@ -3,11 +3,13 @@ import os
 import bcrypt
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+if os.path.exists("env.py"):
+    import env
 
 
 app = Flask (__name__)
-app.config["MONGO_DBNAME"] = "vms"
-app.config["MONGO_URI"] = "mongodb+srv://root:P4Wnet95pal@myfirstcluster-8kwur.mongodb.net/vms?retryWrites=true&w=majority"
+app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
 
@@ -15,7 +17,7 @@ mongo = PyMongo(app)
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("main.html")
 
 @app.route("/admin_panel")
 def admin():
@@ -29,16 +31,15 @@ def signin():
 def adminlogin():
     return render_template("login.html")
 
-@app.route("/login", methods=["POST"])
-def login():
+@app.route("/add_visitor",methods=['POST'])
+def add_visitor():
+    add_new_visitor = {"name": request.form.get("visitorName"),
+                       "company":request.form.get("visitorCompany"),
+                       "visiting":request.form.get("visitorRepresent")}
+    mongo.db.visitors.insert_one(add_new_visitor)
+    return render_template("main.html")
 
-    users = mongo.db.users
-    login_user = users.find_one({'name' : request.form['username']})
 
-    if login_user:
-        if bcrypt.hashpw(request.form['pass'].encode('utf-8'), login_user['password'].encode('utf-8')) == login_user['password'].encode('utf-8'):
-            session['username'] = request.form['username']
-            return redirect(url_for('index'))
 
 if __name__ == "__main__":
     app.run(debug=True)

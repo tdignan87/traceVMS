@@ -1,18 +1,19 @@
 {% extends 'base.html' %} {% block content %}
 
+
 <section class="container" id="sign-in-container">
     <h2 id="sign-in-header">Welcome !</h2>
     <h3 id="sign-in-secondary">Please complete the form below to sign in.</h3>
-    <form>
+    <form action="{{ url_for('add_visitor') }}" method="POST">
         <div class="form-group row" id="name-section">
             <label for="colFormLabel" class="col-form-label">Please enter your name:</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="inputEmail3">
+                <input type="text" class="form-control" id="colFormLabel" name="visitorName">
             </div>
         </div>
 
-        <label for="dropdown" class="dropdown-company">Please select your company from dropdown:</label>
-        <select class="form-control">
+        <label for="dropdown" class="dropdown-company" name="visitorCompany">Please select your company from dropdown:</label>
+        <select class="form-control" name="visitorCompany">
                 <option>Richmack Markings</option>
                 <option>Stevens Traceability</option>
               </select>
@@ -20,9 +21,9 @@
             <p><strong>If your company is not the approved list then please speak to your company representative.</p></strong>
         </div>
         <div class="form-group row" id="name-section">
-            <label for="colFormLabel" class="col-form-label">Who are you visiting?</label>
+            <label for="colFormCompanyEmployee" class="col-form-label">Who are you visiting?</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="inputEmail3">
+                <input type="text" class="form-control" id="colFormCompanyEmployee" name="visitorRepresent">
             </div>
         </div>
         <fieldset class="form-group">
@@ -30,73 +31,80 @@
                 <legend class="col-form-label col-sm-2 pt-0">Visiting Bakery?</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="yesOption">
                         <label class="form-check-label" for="gridRadios1">
                   Yes
                 </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="noOption">
                         <label class="form-check-label" for="gridRadios2">
                   No
                 </label>
 
                     </div>
-        </fieldset>
+                </div>
+            </div>
 
+        </fieldset>
+        <div class="form-group row ">
+            <div class="col-sm-12 ">
+                <button type="submit " class="btn btn-primary" id="visit-only-btn">Sign in</button>
+            </div>
+        </div>
 
     </form>
 </section>
 
 
-<section class="container" id="questionaire-set">
-    <h3>Site visitor & contractor questionnaire</h3>
-    <div class="form-group">
-        <label for="exampleFormControlSelect1">Within the last 3 days have you suffered from vomiting or diarrhoea?</label>
-        <select class="form-control" id="exampleFormControlSelect1">
-            <option value="" selected disabled>Please select</option>
+<section class="container " id="questionaire-set ">
+    <h3 class="header-pointers ">Site visitor & contractor questionnaire</h3>
+    <div class="form-group ">
+        <label for="exampleFormControlSelect1 " class="header-pointers ">Within the last 3 days have you suffered from vomiting or diarrhoea?</label>
+        <select class="form-control " id="exampleFormControlSelect1 ">
+            <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect2">Do you at the present time have a cold or cough?</label>
-        <select class="form-control" id="exampleFormControlSelect2">
-                <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect2 ">Do you at the present time have a cold or cough?</label>
+        <select class="form-control " id="exampleFormControlSelect2 ">
+                <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect3">Are you suffering discharging ears?</label>
-        <select class="form-control" id="exampleFormControlSelect3">
-                <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect3 ">Are you suffering discharging ears?</label>
+        <select class="form-control " id="exampleFormControlSelect3 ">
+                <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect4">Are you at the present time suffering from any skin conditions affecting your hands, forearms, face or neck?</label>
-        <select class="form-control" id="exampleFormControlSelect4">
-                <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect4 ">Are you at the present time suffering from any skin conditions affecting your hands, forearms, face or neck?</label>
+        <select class="form-control " id="exampleFormControlSelect4 ">
+                <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect5">Are you <strong>currently</strong> suffering from, have recently suffered from, or have been in contact with anyone suffering from, an <strong>infectious disease</strong>, or have any symptoms which may relate to an infection, ie high temperature, excessive sweating, open wounds etc.</label>
-        <select class="form-control" id="exampleFormControlSelect5">
-            <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect5 ">Are you <strong>currently</strong> suffering from, have recently suffered from, or have been in contact with anyone suffering from, an <strong>infectious disease</strong>, or have any symptoms which may relate to an infection, ie high temperature, excessive sweating, open wounds etc.</label>
+        <select class="form-control " id="exampleFormControlSelect5 ">
+            <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect6">Are you a carrier of Salmonella?</label>
-        <select class="form-control" id="exampleFormControlSelect6">
-            <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect6 ">Are you a carrier of Salmonella?</label>
+        <select class="form-control " id="exampleFormControlSelect6 ">
+            <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect6">Have you had typhoid or paratyphoid?</label>
-        <select class="form-control" id="exampleFormControlSelect6">
-            <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect6 ">Have you had typhoid or paratyphoid?</label>
+        <select class="form-control " id="exampleFormControlSelect6 ">
+            <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
-        <label for="exampleFormControlSelect6">Have you had typhoid or paratyphoid?</label>
-        <select class="form-control" id="exampleFormControlSelect6">
-            <option value="" selected disabled>Please select</option>
+        <label for="exampleFormControlSelect6 ">Have you had typhoid or paratyphoid?</label>
+        <select class="form-control " id="exampleFormControlSelect6 ">
+            <option value=" " selected disabled>Please select</option>
               <option>Yes</option>
               <option>No</option>
             </select>
@@ -104,15 +112,15 @@
 
 </section>
 
-<section class="container" id="safety-set"></section>
-<div class="card">
-    <div class="card-body">
-        <h3>Health & Safety:</h3>
+<section class="container " id="safety-set "></section>
+<div class="card ">
+    <div class="card-body ">
+        <h3 class="header-pointers ">Health & Safety:</h3>
         <p>Visitors are requested to obey the safety signs in place and any additional instructions they may be given by a Paterson Arran employee to ensure the Health & Safety of themselves and others at all times. In the interests of health and safety,
             visitors are advised to only wear flat, fully enclosed shoes with toes and heel covered while in the bakery. Visitor safety shoes and disposable socks are available from Reception. Fire alarm is tested each Friday between 10 and 11am. If the
             fire alarm sounds outside these hours, please leave the building through the nearest fire exit.
         </p>
-        <h4>Personal Hygiene:</h4>
+        <h4 class="header-pointers ">Personal Hygiene:</h4>
         <ul>
             <li>The protective clothing you have been issued must be worn at all times.</li>
             <li>Hands must be washed, dried and sanitised thoroughly upon entering the bakery.</li>
@@ -128,10 +136,10 @@
     </div>
 </div>
 
-<section class="container" id="safety-set"></section>
-<div class="card">
-    <div class="card-body">
-        <h3>Contractors:</h3>
+
+<div class="card " id="contractor-section ">
+    <div class="card-body ">
+        <h3 class="header-pointers ">Contractors:</h3>
         <p> All contractors carrying out work on this site shall take every precaution to reduce, as far as reasonabily practical, the risk of food contamination and cross contamination of allergens used on site. Every precaution shall be taken to prevent
             injury to others working in, or passing through, the immediate area.
         </p>
@@ -165,30 +173,34 @@
     </div>
 </div>
 
-<section class="container" id="confirmation-container">
-    <h4>Please complete acknolowledging you have read the above:</h4>
-    <div class="form-group row" id="name-section">
-        <label for="inputNameSecond" class="col-form-label">Please enter your name:</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputNameSecond">
+<section class="container " id="confirmation-container ">
+    <div class="form-group form-check ">
+        <input type="checkbox " class="form-check-input " id="exampleCheck1 ">
+        <label class="form-check-label " for="exampleCheck1 ">Please check to acknlowedge you have read the above company rules.</label>
+    </div>
+    <div class="form-group row " id="name-section ">
+        <label for="inputNameSecond " class="col-form-label ">Please enter your name:</label>
+        <div class="col-sm-10 ">
+            <input type="text " class="form-control " id="inputNameSecond ">
         </div>
     </div>
-    <div class="form-group row" id="name-section">
-        <label for="inputDateTime" class="col-form-label">Please select date & time</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="inputDateTime">
+    <div class="form-group row " id="name-section ">
+        <label for="inputDateTime " class="col-form-label ">Please select date & time</label>
+        <div class="col-sm-10 ">
+            <input type="text " class="form-control " id="inputDateTime ">
         </div>
     </div>
-    <div class="form-group row" id="name-section">
-        <label for="signNameFirst" class="col-form-label">Company employee sign(ID Checked?)</label>
-        <div class="col-sm-12">
-            <input type="text" class="form-control" id="signNameFirst">
+    <div class="form-group row " id="name-section ">
+        <label for="signNameFirst " class="col-form-label ">Company employee sign(ID Checked?)</label>
+        <div class="col-sm-12 ">
+            <input type="text " class="form-control " id="signNameFirst ">
         </div>
     </div>
-    <div class="form-group row">
-        <div class="col-sm-12">
-            <button type="submit" class="btn btn-primary">Sign in</button>
+    <div class="form-group row ">
+        <div class="col-sm-12 ">
+            <button type="submit " class="btn btn-primary ">Sign in</button>
         </div>
     </div>
 </section>
+
 {% endblock %}
