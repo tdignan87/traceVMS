@@ -90,3 +90,32 @@ body {
     font-size: 15px;
     font-weight: bold;
 }
+
+#sign-in-header {
+    text-align: center;
+}
+
+#sign-in-secondary {
+    text-align: center;
+}
+
+#sign-in-container {
+    background-color: #42BFE0;
+    padding-bottom: 2rem;
+    text-align: justify;
+}
+
+.company-logo-header {
+    float: right;
+}
+
+#name-section {
+    text-align: center;
+}
+
+#confirmation-container {
+    background-color: #42BFE0;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
