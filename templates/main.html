@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'base.html' %} {% block content %}
+<div class=" jumbotron jumbotron-fluid ">
+    <div class="container col-md-6 ">
+        <h1 class="display-4 ">traceVMS</h1>
+    </div>
+    <div class="container col-md-6 ">
+        <h1 class="lead ">Visitor & Contract Management System</h1>
+    </div>
+</div>
+
+<div class="container " id="option-text ">
+    <h2>please select an option </h2>
+
+
+    <div class="row " id="main-container ">
+        <div class="col-md-6 mb-5 ">
+            <div class="card ">
+                <h5 class="card-header ">Visitors</h5>
+                <div class="card-body ">
+                    <h5 class="card-title ">Visitor Sign In</h5>
+                    <p class="card-text ">If your not doing any work on the fabric or material of the building sign in as a visitor.</p>
+                    <a href="# " class="btn btn-primary ">Sign In</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6 mb-5 ">
+            <div class="card ">
+                <h5 class="card-header ">Contractors</h5>
+                <div class="card-body ">
+                    <h5 class="card-title ">Contractor Sign In</h5>
+                    <p class="card-text ">if your doing any work on the material or fabric of the building sign in as a contractor.</p>
+                    <a href="{{ url_for('signin') }}" class="btn btn-primary ">Sign In</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section class="container " id="support-contact ">
+    <div class="col-md-12 mb-5 ">
+        <h2 class="secondary ">We're here to help...</h2>
+        <hr>
+        <address>
+      <strong>Tracesense Limited</strong>
+      <a href="mailto:# ">info@tracesense.co.uk</a>
+    </address>
+        <div class="container ">
+            <img src=" " alt="Tracesense " style="width:100% ">
+        </div>
+
+    </div>
+</section>
+
+
+<footer class="py-5 bg-dark ">
+    <div class="container ">
+        <p class="m-0 text-center text-white ">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+{% endblock %}
