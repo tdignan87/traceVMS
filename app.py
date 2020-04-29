@@ -13,6 +13,7 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
 
+
 @app.route("/")
 def home():
     return render_template("main.html")
@@ -27,9 +28,10 @@ def signin():
 
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
+    users = mongo.db.users
     error = None
     if request.method == "POST":
-        if request.form["username"] != "sysdba" or request.form["password"] != "masterkey":
+        if request.form["username"] == users.username or request.form["password"] == users.password:
             error = "Invalid Credentials, please try again"
         else:
             return redirect(url_for("admin"))
@@ -38,7 +40,6 @@ def adminlogin():
 
 @app.route("/add_visitor",methods=['POST'])
 def add_visitor():
-    
     dateTimeObj = datetime.now()
     add_new_visitor = {"name": request.form.get("visitorName"),
                        "company":request.form.get("visitorCompany"),
