@@ -22,7 +22,7 @@
                 <div class="card-body ">
                     <h5 class="card-title ">Visitor Sign In</h5>
                     <p class="card-text ">If your not doing any work on the fabric or material of the building sign in as a visitor.</p>
-                    <a href="# " class="btn btn-primary ">Sign In</a>
+                    <a href="{{ url_for('signin') }}" class="btn btn-primary " id="visitor-sign-btn">Sign In</a>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                 <div class="card-body ">
                     <h5 class="card-title ">Contractor Sign In</h5>
                     <p class="card-text ">if your doing any work on the material or fabric of the building sign in as a contractor.</p>
-                    <a href="{{ url_for('signin') }}" class="btn btn-primary ">Sign In</a>
+                    <a href="{{ url_for('signin') }}" class="btn btn-primary " id="contractor-sign-btn">Sign In</a>
                 </div>
             </div>
 
