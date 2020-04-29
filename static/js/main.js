@@ -1,6 +1,7 @@
 let confirmCheck = document.getElementById("noticeCheckbox");
+
+
 /**
- 
  * Hide questions section of signin page if visiting bakery checkbox is not checked.
  */
 
@@ -32,15 +33,12 @@ $('input:radio[name="gridRadios"]').change(
         }
     });
 
-if ($("#noticeCheckbox").is(':checked')) {
-    console.log("checked box yehoo");
-}
-
 
 /**
- * Visitor sign button clicked then check relevant radio button on form load automatically.
+ * If checkbox is checked for visiting bakery then show the sign in button.
  */
-$("#visitor-sign-btn").click(function() {
-    $("#gridradios1").click();
-
+$("#noticeCheckbox").click(function() {
+    if (confirmCheck.checked == true) {
+        $("#visit-only-btn").show();
+    }
 })
