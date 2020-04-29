@@ -50,5 +50,11 @@ def add_visitor():
     mongo.db.visitors.insert_one(add_new_visitor)
     return render_template("main.html")
 
+@app.route("/add_company")
+def addcompany():
+    return render_template("add-company.html")
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
