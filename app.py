@@ -25,13 +25,19 @@ def admin():
 def signin():
     return render_template("signin.html")
 
-@app.route("/admin_login")
+@app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
-    return render_template("login.html")
+    error = None
+    if request.method == "POST":
+        if request.form["username"] != "sysdba" or request.form["password"] != "masterkey":
+            error = "Invalid Credentials, please try again"
+        else:
+            return redirect(url_for("admin"))
+    return render_template("login.html", error=error)
+    
 
 @app.route("/add_visitor",methods=['POST'])
 def add_visitor():
-    
     
     dateTimeObj = datetime.now()
     add_new_visitor = {"name": request.form.get("visitorName"),
