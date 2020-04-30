@@ -54,6 +54,16 @@ def add_visitor():
 def addcompany():
     return render_template("add-company.html")
 
+@app.route("/insert_company", methods=['POST'])
+def insert_company():
+    company_doc = {"Name": request.form.get("newCompanyName"),
+                   "Address": request.form.get("newCompanyAddress"),
+                    "approved":request.form.get("approveRadios")}
+    mongo.db.contractors.insert_one(company_doc)
+    return redirect(url_for("admin"))
+    
+    
+
 
 
 if __name__ == "__main__":
