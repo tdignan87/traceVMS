@@ -68,7 +68,9 @@ def insert_question():
     
 @app.route("/add_question", methods=['POST'])
 def add_question():
-    add_new_question = {"Question": request.form.get("newQuestionAdd")}
+    add_new_question = {"Question": request.form.get("newQuestionAdd"),
+                        "Answer_First": request.form.get("newAnswerAdd"),
+                        "Answer_Second": request.form.get("newAnswerAddSecond")}
     mongo.db.av_questions.insert_one(add_new_question)
     return redirect(url_for("admin"))
 
