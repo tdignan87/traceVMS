@@ -15,9 +15,12 @@
         <label for="dropdown" class="dropdown-company" name="visitorCompany">Please select your company from dropdown:</label>
         <select class="form-control" name="visitorCompany" required>
                 <option disabled selected value></option>
-            <option>Richmack Markings</option>
-                <option>Stevens Traceability</option>
-              </select>
+                {% for comp in contractors %}
+                {% if comp.approved == 'true' %}
+            <option>{{comp.Name}}</option>
+            {% endif %}
+            {% endfor %}
+        </select>
         <div class="warning-text">
             <p><strong>If your company is not the approved list then please speak to your company representative.</p></strong>
         </div>
@@ -63,55 +66,22 @@
     </form>
 </section>
 
+<form>
+    <section class="container " id="questionaire-set">
+        <h3 class="header-pointers ">Site visitor & contractor questionnaire</h3>
+        <div class="form-group ">
+            {% for question in av_questions %}
+            <label for="exampleFormControlSelect1 " class="header-pointers ">{{question.Question}}</label>
+            <select class="form-control " id="exampleFormControlSelect1 ">
+            <option value=" " selected disabled>Please select</option>
+              <option value="">{{question.Answer_First}}</option>
+              <option value"">{{question.Answer_Second}}</option>
+              
+            </select> {% endfor %}
+        </div>
 
-<section class="container " id="questionaire-set">
-    <h3 class="header-pointers ">Site visitor & contractor questionnaire</h3>
-    <div class="form-group ">
-        <label for="exampleFormControlSelect1 " class="header-pointers ">Within the last 3 days have you suffered from vomiting or diarrhoea?</label>
-        <select class="form-control " id="exampleFormControlSelect1 " class="qc-options-value">
-            <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-        <label for="exampleFormControlSelect2 ">Do you at the present time have a cold or cough?</label>
-        <select class="form-control " id="exampleFormControlSelect2 ">
-                <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-        <label for="exampleFormControlSelect3 ">Are you suffering discharging ears?</label>
-        <select class="form-control " id="exampleFormControlSelect3 ">
-                <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-        <label for="exampleFormControlSelect4 ">Are you at the present time suffering from any skin conditions affecting your hands, forearms, face or neck?</label>
-        <select class="form-control " id="exampleFormControlSelect4 ">
-                <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-        <label for="exampleFormControlSelect5 ">Are you <strong>currently</strong> suffering from, have recently suffered from, or have been in contact with anyone suffering from, an <strong>infectious disease</strong>, or have any symptoms which may relate to an infection, ie high temperature, excessive sweating, open wounds etc.</label>
-        <select class="form-control " id="exampleFormControlSelect5 ">
-            <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-        <label for="exampleFormControlSelect6 ">Are you a carrier of Salmonella?</label>
-        <select class="form-control " id="exampleFormControlSelect6 ">
-            <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-        <label for="exampleFormControlSelect6 ">Have you had typhoid or paratyphoid?</label>
-        <select class="form-control " id="exampleFormControlSelect6 ">
-            <option value=" " selected disabled>Please select</option>
-              <option>Yes</option>
-              <option>No</option>
-            </select>
-    </div>
-
-</section>
+    </section>
+</form>
 
 <section class="container " id="safety-set "></section>
 <div class="card ">
