@@ -18,10 +18,10 @@
     <div class="row " id="main-container ">
         <div class="col-md-6 mb-5 ">
             <div class="card ">
-                <h5 class="card-header ">Visitors</h5>
+                <h5 class="card-header ">Sign In</h5>
                 <div class="card-body ">
-                    <h5 class="card-title ">Visitor Sign In</h5>
-                    <p class="card-text ">If your not doing any work on the fabric or material of the building sign in as a visitor.</p>
+                    <h5 class="card-title ">Visitor & Contractor Sign In</h5>
+                    <p class="card-text ">If your not doing any work on the fabric or material of the building sign in as a <strong>visitor</strong>. <br>if <strong> you are</strong> doing any work on the material or fabric of the building sign in as a <strong>contractor</strong>.</p>
                     <a href="{{ url_for('signin') }}" class="btn btn-primary " id="visitor-sign-btn">Sign In</a>
                 </div>
             </div>
@@ -29,11 +29,11 @@
         </div>
         <div class="col-md-6 mb-5 ">
             <div class="card ">
-                <h5 class="card-header ">Contractors</h5>
+                <h5 class="card-header ">Sign Out</h5>
                 <div class="card-body ">
-                    <h5 class="card-title ">Contractor Sign In</h5>
-                    <p class="card-text ">if your doing any work on the material or fabric of the building sign in as a contractor.</p>
-                    <a href="{{ url_for('signin') }}" class="btn btn-primary " id="contractor-sign-btn">Sign In</a>
+                    <h5 class="card-title ">Visitor & Contractor Sign Out</h5>
+                    <p class="card-text ">All <strong>visitors</strong> and <strong>contractors</strong> must sign out when leaving the site. Thank you for visiting. </p>
+                    <a href="{{ url_for('signin') }}" class="btn btn-success " id="contractor-sign-btn">Sign Out</a>
                 </div>
             </div>
 
