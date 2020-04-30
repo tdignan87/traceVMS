@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 
-<section class="container" id="company-new-container">
+<section class="container" id="question-new-container">
     <h2>Add New Questions</h2>
     <form>
         <div class="form-group row">
@@ -9,8 +9,14 @@
             <div class="col-sm-12">
                 <input type="text" class="form-control" id="colFormLabelFirst" name="newQuestionAdd" required>
             </div>
+            <p>Please note these questions will be asked if visitor answers yes to entering the bakery.</p>
         </div>
-
+        <div class="form-group row ">
+            <div class="col-sm-12 ">
+                <button type="submit " class="btn btn-primary btn-block" id="new-question-btn">Save</button>
+                <button type="button" class="btn btn-danger btn-block" href="">Cancel</button>
+            </div>
+        </div>
     </form>
 
 </section>
