@@ -62,8 +62,15 @@ def insert_company():
     mongo.db.contractors.insert_one(company_doc)
     return redirect(url_for("admin"))
     
+@app.route("/insert_question")
+def insert_question():
+    return render_template("add-questions.html")
     
-
+@app.route("/add_question", methods=['POST'])
+def add_question():
+    add_new_question = {"Question": request.form.get("newQuestionAdd")}
+    mongo.db.av_questions.insert_one(add_new_question)
+    return redirect(url_for("admin"))
 
 
 if __name__ == "__main__":
