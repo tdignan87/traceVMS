@@ -3,18 +3,28 @@
 
 <section class="container" id="question-new-container">
     <h2>Add New Questions</h2>
-    <form>
+    <form action=" {{ url_for('add_question') }}" method="POST">
         <div class="form-group row">
             <label for="colFormLabel" class="col-form-label">Please enter new question:</label>
             <div class="col-sm-12">
                 <input type="text" class="form-control" id="colFormLabelFirst" name="newQuestionAdd" required>
             </div>
-            <p>Please note these questions will be asked if visitor answers yes to entering the bakery.</p>
+            <div class="col-sm-12">
+                <label for="colFormLabel" class="col-form-label">First Answer:</label>
+                <input type="text" class="form-control" id="colFormLabelSecond" name="newAnswerAdd" required>
+            </div>
+            <div class="col-sm-12">
+                <label for="colFormLabel" class="col-form-label">Second Answer:</label>
+                <input type="text" class="form-control" id="colFormLabelThird" name="newAnswerAddSecond" required>
+            </div>
+
+
         </div>
+        <p class="question-notice">Please note these questions are designed for anyone entering the bakery.</p>
         <div class="form-group row ">
             <div class="col-sm-12 ">
                 <button type="submit " class="btn btn-primary btn-block" id="new-question-btn">Save</button>
-                <button type="button" class="btn btn-danger btn-block" href="">Cancel</button>
+                <button type="button" class="btn btn-danger btn-block" href="{{url_for ('admin')}}">Cancel</button>
             </div>
         </div>
     </form>
