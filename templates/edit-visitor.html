@@ -1,0 +1,56 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<section class="container" id="company-new-container">
+    <h2>Add New Visitor</h2>
+    <form action=" {{ url_for('insert_company') }}" method="POST">
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-form-label">Please enter new company name:</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="colFormLabelFirst" name="newCompanyName" required>
+            </div>
+        </div>
+
+
+        <div class="form-group row">
+            <label for="colFormLabel" class="col-form-label">Please enter new company address:</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="colFormLabelSecond" name="newCompanyAddress" required>
+            </div>
+        </div>
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label">Company Approved?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="approveRadios" id="gridRadios1" value="true">
+                        <label class="form-check-label" for="gridRadios1">
+              Approved
+            </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="approveRadios" id="gridRadios2" value="false">
+                        <label class="form-check-label" for="gridRadios2">
+              Rejected
+            </label>
+
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+        <div class="form-group row ">
+            <div class="col-sm-12 ">
+                <button type="submit " class="btn btn-primary btn-block" id="new-company-btn">Save</button>
+                <button type="button" class="btn btn-danger btn-block" href="">Cancel</button>
+            </div>
+        </div>
+
+    </form>
+
+</section>
+
+
+
+
+{% endblock %}
