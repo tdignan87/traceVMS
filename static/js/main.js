@@ -58,7 +58,4 @@ $("select.form-control").change(function() {
     } else if (confirmCheck.checked == true) {
         $("#visit-only-btn").show();
     }
-
-
-
 });
