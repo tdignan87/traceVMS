@@ -24,7 +24,8 @@ def admin():
 
 @app.route("/sign_in")
 def signin():
-    return render_template("signin.html")
+    return render_template("signin.html",
+                           av_questions=mongo.db.av_questions.find())
 
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
