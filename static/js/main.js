@@ -55,6 +55,7 @@ $("select.form-control").change(function() {
     if ($(this).children("option:selected").val() == "Yes") {
         alert("Please notify site contact as conditions have failed for entering the site. Only proceed if company has still given you permission to enter site.");
         $("#visit-only-btn").hide();
+        console.log("checked");
     } else if (confirmCheck.checked == true) {
         $("#visit-only-btn").show();
     }
