@@ -136,3 +136,7 @@ body {
     text-align: center;
     padding-left: 1rem;
 }
+
+.alert-delete {
+    color: #ff0000;
+}
