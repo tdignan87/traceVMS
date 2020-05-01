@@ -81,7 +81,7 @@ def sign_out():
     return render_template("sign-out.html",
                            visitors=mongo.db.visitors.find())
     
-@app.route("/sign_out_visitor",methods=['POST'])
+@app.route("/sign_out_visitor/<visitor_id>",methods=['POST'])
 def sign_out_visitor(visitor_id):
     dateTimeObj = datetime.now()
     signout = mongo.db.visitors
@@ -92,8 +92,6 @@ def sign_out_visitor(visitor_id):
     })
     return redirect(url_for("main"))
                     
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
