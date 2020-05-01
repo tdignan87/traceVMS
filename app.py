@@ -76,6 +76,24 @@ def add_question():
     mongo.db.av_questions.insert_one(add_new_question)
     return redirect(url_for("admin"))
 
+@app.route("/sign_out")
+def sign_out():
+    return render_template("sign-out.html",
+                           visitors=mongo.db.visitors.find())
+    
+@app.route("/sign_out_visitor",methods=['POST'])
+def sign_out_visitor(visitor_id):
+    dateTimeObj = datetime.now()
+    signout = mongo.db.visitors
+    signout.update( {"_id": ObjectId(visitor_id)},
+    {
+        "sign_out_timestamp":dateTimeObj
+        
+    })
+    return redirect(url_for("main"))
+                    
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
