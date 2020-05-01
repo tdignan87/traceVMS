@@ -37,7 +37,7 @@ def adminlogin():
     users = mongo.db.users
     error = None
     if request.method == "POST":
-        if request.form["username"] == users.username or request.form["password"] == users.password:
+        if request.form["username"] == users.username and request.form["password"] == users.password:
             error = "Invalid Credentials, please try again"
         else:
             return redirect(url_for("admin"))
@@ -101,6 +101,15 @@ def sign_out_visitor():
     }})
     return redirect(url_for("home"))
                     
+@app.route("/edit_visitor")
+def edit_visitor():
+    return render_template("edit-visitor.html",
+                           visitors=mongo.db.visitors.find(),
+                           contractors=mongo.db.contractors.find())
+
+
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
