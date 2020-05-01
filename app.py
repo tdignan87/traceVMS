@@ -13,6 +13,9 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 
 mongo = PyMongo(app)
 
+### Constants ###
+
+
 
 @app.route("/")
 def home():
@@ -106,10 +109,19 @@ def edit_visitor():
     return render_template("edit-visitor.html",
                            visitors=mongo.db.visitors.find(),
                            contractors=mongo.db.contractors.find())
-
-
-
-
-
+    
+@app.route("/amend_visitor",methods=["'POST"])
+def amend_visitor():
+    visitor_id = request.form.get("visitorName")
+    update = mongo.db.visitors
+    update.update_one ({"_id": ObjectId(visitor_id)},
+                       {"$set":{
+                            "name": request.form.get("chooseName"),
+                            "company": request.form.get("visitorCompany"),
+                            "visiting": request.form.get("editVisiting")
+                       }})
+    return redirect(url_for("admin"))
+                       
+    
 if __name__ == "__main__":
     app.run(debug=True)
