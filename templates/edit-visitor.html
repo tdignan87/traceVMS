@@ -5,7 +5,7 @@
     <h2>Edit Visitor Details</h2>
     <form action="{{ url_for('edit_visitor') }}" method="POST">
         <div class="form-group row">
-            <label for="dropdown" class="dropdown-company" name="visitorCompany">Please select visitors name:</label>
+            <label for="dropdown" class="dropdown-visitor" name="visitorName">Please select visitors name:</label>
             <select class="form-control" name="visitorCompany">
                     <option disabled selected value></option>
                     {% for visitor in visitors %}
@@ -14,9 +14,16 @@
                 {% endif %}
                 {% endfor %}
             </select>
-            <label for="colFormLabel" class="col-form-label">Please select visitor</label>
+            <label for="dropdown" class="dropdown-company" name="visitorCompany">visitor Company:</label>
+            <select class="form-control" name="visitorCompany">
+                    <option disabled selected value></option>
+                    {% for company in contractors %}
+                <option>{{company.Name}}</option>
+                {% endfor %}
+            </select>
+            <label for="colFormVisiting" class="col-form-label">Visiting:</label>
             <div class="col-sm-12">
-                <input type="text" class="form-control" id="colFormLabelFirst" name="newCompanyName" required>
+                <input type="text" class="form-control" id="colFormVisiting" name="editVisiting" required>
             </div>
         </div>
 
@@ -24,7 +31,7 @@
         </fieldset>
         <div class="form-group row ">
             <div class="col-sm-12 ">
-                <button type="submit " class="btn btn-primary btn-block" id="new-company-btn">Save</button>
+                <button type="submit " class="btn btn-primary btn-block" id="new-company-btn">Update</button>
                 <button type="button" class="btn btn-danger btn-block" href="">Cancel</button>
             </div>
         </div>
