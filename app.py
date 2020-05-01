@@ -110,13 +110,12 @@ def edit_visitor():
                            visitors=mongo.db.visitors.find(),
                            contractors=mongo.db.contractors.find())
     
-@app.route("/amend_visitor",methods=["'POST"])
+@app.route("/amend_visitor",methods=['POST'])
 def amend_visitor():
-    visitor_id = request.form.get("visitorName")
+    visitor_id = request.form.get("chooseName")
     update = mongo.db.visitors
     update.update_one ({"_id": ObjectId(visitor_id)},
                        {"$set":{
-                            "name": request.form.get("chooseName"),
                             "company": request.form.get("visitorCompany"),
                             "visiting": request.form.get("editVisiting")
                        }})
