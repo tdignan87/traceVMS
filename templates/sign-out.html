@@ -3,14 +3,14 @@
 <section class="container" id="sign-out-visitor">
     <h2>Visitor Sign Out</h2>
     <h3>We hope you have enjoyed your visit.</h3>
-    <form action="{{ url_for('sign_out_visitor', visitor_id=visitor_id) }}" method="POST">
+    <form action="{{ url_for('sign_out_visitor') }}" method="POST">
 
         <label for="dropdown" class="dropdown-company" name="visitorCompany">Please select your name:</label>
         <select class="form-control" name="signOutName" required>
                 <option disabled selected value></option>
                 {% for visitor in visitors %}
                
-            <option value="{{visitor_id}}">{{visitor.name}}</option>
+            <option value="{{visitor._id}}">{{visitor.name}}</option>
             
             {% endfor %}
         </select>
