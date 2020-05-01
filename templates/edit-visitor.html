@@ -3,14 +3,14 @@
 
 <section class="container" id="edit-visitor-container">
     <h2>Edit Visitor Details</h2>
-    <form action="{{ url_for('edit_visitor') }}" method="POST">
+    <form action="{{ url_for('amend_visitor') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-visitor" name="visitorName">Please select visitors name:</label>
-            <select class="form-control" name="visitorCompany">
+            <select class="form-control" name="chooseName">
                     <option disabled selected value></option>
                     {% for visitor in visitors %}
                     {% if visitor.sign_out_timestamp is not defined %}
-                <option value="{{visitor._id}}">{{visitor.name}}</option>
+                <option value="{{visitor._id}}" required>{{visitor.name}}</option>
                 {% endif %}
                 {% endfor %}
             </select>
@@ -18,7 +18,7 @@
             <select class="form-control" name="visitorCompany">
                     <option disabled selected value></option>
                     {% for company in contractors %}
-                <option>{{company.Name}}</option>
+                <option>{{company.Name}}</option required>
                 {% endfor %}
             </select>
             <label for="colFormVisiting" class="col-form-label">Visiting:</label>
