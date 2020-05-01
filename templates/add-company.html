@@ -1,51 +1,35 @@
 {% extends 'base.html' %} {% block content %}
 
 
-<section class="container" id="company-new-container">
+<section class="container options-container">
     <h2>Add New Company</h2>
-    <form>
+    <form action=" {{ url_for('insert_company') }}" method="POST">
         <div class="form-group row">
             <label for="colFormLabel" class="col-form-label">Please enter new company name:</label>
             <div class="col-sm-12">
                 <input type="text" class="form-control" id="colFormLabelFirst" name="newCompanyName" required>
             </div>
         </div>
-    </form>
-    <form>
+
+
         <div class="form-group row">
             <label for="colFormLabel" class="col-form-label">Please enter new company address:</label>
             <div class="col-sm-12">
                 <input type="text" class="form-control" id="colFormLabelSecond" name="newCompanyAddress" required>
             </div>
         </div>
-    </form>
-    <form>
-        <div class="form-group row">
-            <label for="colFormLabel" class="col-form-label">Please enter liability insurance renewal date:</label>
-            <div class="col-sm-12" id="datetimepicker3">
-                <input type="text" class="form-control" id="colFormLabelThird" name="liabilityRenewalDate" required>
-            </div>
-        </div>
-    </form>
-    <form>
-        <label for="colFormLabel" class="col-form-label">please enter safety policy satement renewal date:</label>
-        <div class="input-append date" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
-            <input class="span2" size="16" type="text" value="12-02-2012">
-            <span class="add-on"><i class="icon-th"></i></span>
-        </div>
-
         <fieldset class="form-group">
             <div class="row">
                 <legend class="col-form-label">Company Approved?</legend>
                 <div class="col-sm-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="true">
+                        <input class="form-check-input" type="radio" name="approveRadios" id="gridRadios1" value="true">
                         <label class="form-check-label" for="gridRadios1">
               Approved
             </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="false">
+                        <input class="form-check-input" type="radio" name="approveRadios" id="gridRadios2" value="false">
                         <label class="form-check-label" for="gridRadios2">
               Rejected
             </label>
@@ -58,9 +42,10 @@
         <div class="form-group row ">
             <div class="col-sm-12 ">
                 <button type="submit " class="btn btn-primary btn-block" id="new-company-btn">Save</button>
-                <button type="button" class="btn btn-danger btn-block" href="{{url_for ('home') }}">Cancel</button>
+                <button type="button" class="btn btn-danger btn-block" href="{{url_for ('admin')}}">Cancel</button>
             </div>
         </div>
+
     </form>
 
 </section>
