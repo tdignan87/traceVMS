@@ -3,6 +3,7 @@
 
 <section class="container options-container">
     <h2>Delete Visitor</h2>
+    <h4 class="alert-delete">Please note deleting a record will permanetly remove it from the system.</h4>
     <form action="{{ url_for('delete_visitor') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-visitor" name="visitorName">Please select visitor you wish to delete:</label>
