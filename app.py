@@ -121,6 +121,12 @@ def amend_visitor():
                        }})
     return redirect(url_for("admin"))
                        
+                       
+@app.route("/delete")
+def delete():
+    return render_template("delete-visitor.html",
+                           visitors=mongo.db.visitors.find())                  
+                    
     
 if __name__ == "__main__":
     app.run(debug=True)
