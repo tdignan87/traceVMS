@@ -22,12 +22,16 @@ def home():
 def admin():
     return render_template("admin.html")
 
+
+""" Find and display questions and contractors in dropdown choices """
 @app.route("/sign_in")
 def signin():
     return render_template("signin.html",
                            av_questions=mongo.db.av_questions.find(),
                            contractors=mongo.db.contractors.find())
 
+
+""" Administrator login page to access admin menu for CRUD """
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
     users = mongo.db.users
@@ -39,7 +43,7 @@ def adminlogin():
             return redirect(url_for("admin"))
     return render_template("login.html", error=error)
     
-
+""" Add signed in visitor details to database """
 @app.route("/add_visitor",methods=['POST'])
 def add_visitor():
     dateTimeObj = datetime.now()
@@ -52,10 +56,12 @@ def add_visitor():
     mongo.db.visitors.insert_one(add_new_visitor)
     return render_template("main.html")
 
+
 @app.route("/add_company")
 def addcompany():
     return render_template("add-company.html")
 
+""" Add new company details into DB """
 @app.route("/insert_company", methods=['POST'])
 def insert_company():
     company_doc = {"Name": request.form.get("newCompanyName"),
@@ -68,6 +74,7 @@ def insert_company():
 def insert_question():
     return render_template("add-questions.html")
     
+    """ Add New Questions into DB"""
 @app.route("/add_question", methods=['POST'])
 def add_question():
     add_new_question = {"Question": request.form.get("newQuestionAdd"),
@@ -81,6 +88,8 @@ def sign_out():
     return render_template("sign-out.html",
                            visitors=mongo.db.visitors.find())
     
+    
+    """ Update visitor table by adding in signed out timestamp """
 @app.route("/sign_out_visitor",methods=['POST'])
 def sign_out_visitor():
     visitor_id = request.form.get("signOutName")
