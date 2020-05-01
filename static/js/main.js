@@ -50,13 +50,3 @@ $("#noticeCheckbox").click(function() {
 /**
  * If any option values equal "Yes" then hide the sign in button and alert the user. If not, and checkbox is checked then system will proceed.Possible future conditions should allow a admin to bypass any yes and permit
  */
-$("select.form-control").change(function() {
-
-    if ($(this).children("option:selected").val() == "Yes") {
-        alert("Please notify site contact as conditions have failed for entering the site. Only proceed if company has still given you permission to enter site.");
-        $("#visit-only-btn").hide();
-        console.log("checked");
-    } else if (confirmCheck.checked == true) {
-        $("#visit-only-btn").show();
-    }
-});
