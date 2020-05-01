@@ -9,9 +9,9 @@
         <select class="form-control" name="signOutName" required>
                 <option disabled selected value></option>
                 {% for visitor in visitors %}
-               
+                {% if visitor.sign_out_timestamp is not defined %}
             <option value="{{visitor._id}}">{{visitor.name}}</option>
-            
+            {% endif %}
             {% endfor %}
         </select>
         <p class="question-notice">Please ensure you have have returned your badge.</p>
