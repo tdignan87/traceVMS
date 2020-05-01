@@ -81,16 +81,16 @@ def sign_out():
     return render_template("sign-out.html",
                            visitors=mongo.db.visitors.find())
     
-@app.route("/sign_out_visitor/<visitor_id>",methods=['POST'])
-def sign_out_visitor(visitor_id):
+@app.route("/sign_out_visitor",methods=['POST'])
+def sign_out_visitor():
+    visitor_id = request.form.get("signOutName")
     dateTimeObj = datetime.now()
     signout = mongo.db.visitors
-    signout.update( {"_id": ObjectId(visitor_id)},
-    {
-        "sign_out_timestamp":dateTimeObj
-        
-    })
-    return redirect(url_for("main"))
+    signout.update_one ({"_id": ObjectId(visitor_id)},
+                           {"$set":{
+        "sign_out_timestamp":dateTimeObj 
+    }})
+    return redirect(url_for("home"))
                     
 
 if __name__ == "__main__":
