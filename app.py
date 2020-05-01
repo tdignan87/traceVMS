@@ -126,7 +126,13 @@ def amend_visitor():
 def delete():
     return render_template("delete-visitor.html",
                            visitors=mongo.db.visitors.find())                  
-                    
+
+@app.route("/delete_visitor",methods=['POST'])
+def delete_visitor():
+    visitor_id = request.form.get("deleteName")
+    mongo.db.visitors.remove({'_id': ObjectId(visitor_id)})
+    return redirect(url_for("admin"))
+                                           
     
 if __name__ == "__main__":
     app.run(debug=True)
