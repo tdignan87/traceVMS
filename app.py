@@ -139,7 +139,7 @@ def edit_company():
                            contractors=mongo.db.contractors.find()) 
    
 @app.route("/update_company",methods=['POST'])
-def update_visitor():
+def update_company():
     company_id = request.form.get("chooseCompany")
     update = mongo.db.contractors
     update.update_one({"_id": ObjectId(company_id)},
@@ -148,6 +148,11 @@ def update_visitor():
                           "approved": request.form.get("approveRadios")
                       }})
     return redirect(url_for("admin"))
+
+@app.route("/delete_company")
+def delete_company():
+    return render_template("delete-company.html")
+
     
 if __name__ == "__main__":
     app.run(debug=True)
