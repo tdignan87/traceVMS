@@ -175,10 +175,17 @@ def update_question():
                       }})
     return redirect(url_for("admin"))
 
-@app.route("delete_question")
+@app.route("/delete_question")
 def delete_question():
     return render_template("delete-question.html",
                            av_questions=mongo.db.av_questions.find())
+
+@app.route("/remove_question",methods=['POST'])
+def remove_question():
+    question_id = request.form.get("removeQuestion")
+    mongo.db.av_questions.remove({'id': ObjectId(question_id)})
+    return redirect(url_for("admin"))
+
 
 
 if __name__ == "__main__":
