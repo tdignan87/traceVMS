@@ -6,7 +6,7 @@
     <form action="{{ url_for('update_question') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-question" name="editQuestion">Please select question:</label>
-            <select class="form-control" name="chooseQuestion">
+            <select class="form-control" name="amendQuestion">
                     <option disabled selected value></option>
                     {% for question in av_questions %}
                 <option value="{{question._id}}" required>{{question.Question}}</option>
