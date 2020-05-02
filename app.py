@@ -151,7 +151,15 @@ def update_company():
 
 @app.route("/delete_company")
 def delete_company():
-    return render_template("delete-company.html")
+    return render_template("delete-company.html",
+                           contractors=mongo.db.contractors.find())
+
+@app.route("/delete_company_record",methods=['POST'])
+def delete_company_record():
+    company_id = request.form.get("deleteCompany")
+    mongo.db.contractors.remove({'_id': ObjectId(company_id)})
+    return redirect(url_for("admin"))
+
 
     
 if __name__ == "__main__":
