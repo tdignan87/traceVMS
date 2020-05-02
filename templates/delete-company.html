@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<section class="container options-container">
+    <h2>Delete Company</h2>
+    <h4 class="alert-delete">Please note deleting a record will permanetly remove it from the system.</h4>
+    <form action="{{ url_for('delete_visitor') }}" method="POST">
+        <div class="form-group row">
+            <label for="dropdown" class="dropdown-visitor" name="visitorName">Please select company you wish to delete:</label>
+            <select class="form-control" name="deleteName">
+                    <option disabled selected value></option>
+                    {% for company in contractors %}
+                <option value="{{visitor._id}}" required>{{visitor.name}}</option>
+                {% endfor %}
+            </select>
+            <div class="form-group row ">
+                <div class="col-sm-12 ">
+                    <button type="submit " class="btn btn-danger btn-block" id="delete-visitor-btn">Delete Record</button>
+                    <button type="button" class="btn btn-primary btn-block" href="{{url_for('admin')}}" " >Cancel</button>
+            </div>
+        </div>
+
+    </form>
+
+</section>
+
+
+
+
+{% endblock %}
