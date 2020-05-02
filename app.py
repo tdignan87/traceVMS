@@ -128,7 +128,7 @@ def delete():
 @app.route("/delete_visitor",methods=['POST'])
 def delete_visitor():
     visitor_id = request.form.get("deleteName")
-    mongo.db.visitors.remove({'_id': ObjectId(visitor_id)})
+    mongo.db.visitors.remove({"_id": ObjectId(visitor_id)})
     return redirect(url_for("admin"))
                                            
 @app.route("/edit_company")
