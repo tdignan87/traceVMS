@@ -46,7 +46,3 @@ $("#noticeCheckbox").click(function() {
         $("#visit-only-btn").hide();
     }
 })
-
-/**
- * If any option values equal "Yes" then hide the sign in button and alert the user. If not, and checkbox is checked then system will proceed.Possible future conditions should allow a admin to bypass any yes and permit
- */
