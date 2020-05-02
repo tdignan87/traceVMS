@@ -166,7 +166,7 @@ def edit_question():
 
 @app.route("/update_question",methods=['POST'])
 def update_question():
-    question_id = request.form.get("amendQuestion"),
+    question_id = request.form.get("amendQuestion")
     update = mongo.db.av_questions
     update.update_one({"_id": ObjectId(question_id)},
                       {"$set": {
