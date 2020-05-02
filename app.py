@@ -140,13 +140,14 @@ def edit_company():
    
 @app.route("/update_company",methods=['POST'])
 def update_visitor():
-    company_id = request.form.get("companyName")
+    company_id = request.form.get("chooseCompany")
     update = mongo.db.contractors
     update.update_one({"_id": ObjectId(company_id)},
                       {"$set": {
                           "Address": request.form.get("editCompAddress"),
                           "approved": request.form.get("approveRadios")
                       }})
+    return redirect(url_for("admin"))
     
 if __name__ == "__main__":
     app.run(debug=True)
