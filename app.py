@@ -133,6 +133,20 @@ def delete_visitor():
     mongo.db.visitors.remove({'_id': ObjectId(visitor_id)})
     return redirect(url_for("admin"))
                                            
+@app.route("/edit_company")
+def edit_company():
+    return render_template("edit-company.html",
+                           contractors=mongo.db.contractors.find()) 
+   
+@app.route("/update_company",methods=['POST'])
+def update_visitor():
+    company_id = request.form.get("companyName")
+    update = mongo.db.contractors
+    update.update_one({"_id": ObjectId(company_id)},
+                      {"$set": {
+                          "Address": request.form.get("editCompAddress"),
+                          "approved": request.form.get("approveRadios")
+                      }})
     
 if __name__ == "__main__":
     app.run(debug=True)
