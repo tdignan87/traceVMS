@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 
-<section class="container options-container">
+<section class="container options-container" id="sign-in-container">
     <h2 id="sign-in-header">Welcome !</h2>
     <h3 id="sign-in-secondary">Please complete the form below to sign in.</h3>
     <form action="{{ url_for('add_visitor') }}" method="POST">
