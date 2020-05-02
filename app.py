@@ -183,7 +183,7 @@ def delete_question():
 @app.route("/remove_question",methods=['POST'])
 def remove_question():
     question_id = request.form.get("removeQuestion")
-    mongo.db.av_questions.remove({'id': ObjectId(question_id)})
+    mongo.db.av_questions.remove({"_id": ObjectId(question_id)})
     return redirect(url_for("admin"))
 
 
