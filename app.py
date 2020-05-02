@@ -15,8 +15,6 @@ mongo = PyMongo(app)
 
 ### Constants ###
 
-
-
 @app.route("/")
 def home():
     return render_template("main.html")
@@ -167,7 +165,7 @@ def edit_question():
 
 @app.route("/update_question",methods=['POST'])
 def update_question():
-    question_id = request.form.get("chooseQuestion"),
+    question_id = request.form.get("amendQuestion"),
     update = mongo.db.av_questions
     update.update_one({"_id": ObjectId(question_id)},
                       {"$set": {
@@ -177,7 +175,10 @@ def update_question():
                       }})
     return redirect(url_for("admin"))
 
-
+@app.route("delete_question")
+def delete_question():
+    return render_template("delete-question.html",
+                           av_questions=mongo.db.av_questions.find())
 
 
 if __name__ == "__main__":
