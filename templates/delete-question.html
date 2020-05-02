@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<section class="container options-container">
+    <h2>Delete Question</h2>
+    <h4 class="alert-delete">Please note deleting a record will permanetly remove it from the system.</h4>
+    <form>
+        <div class="form-group row">
+            <label for="dropdown" class="dropdown-visitor" name="companyName">Please select question you wish to delete:</label>
+            <select class="form-control" name="deleteCompany">
+                    <option disabled selected value></option>
+                    {% for question in av_questions %}
+                <option value="{{company._id}}" required>{{question.Question}}</option>
+                {% endfor %}
+            </select>
+            <div class="form-group row ">
+                <div class="col-sm-12 ">
+                    <button type="submit " class="btn btn-danger btn-block" id="delete-question-btn">Delete Record</button>
+                    <button type="button" class="btn btn-primary btn-block" href="{{url_for('admin')}}" " >Cancel</button>
+            </div>
+        </div>
+
+    </form>
+
+</section>
+
+
+
+
+{% endblock %}
