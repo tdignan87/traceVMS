@@ -160,7 +160,25 @@ def delete_company_record():
     mongo.db.contractors.remove({'_id': ObjectId(company_id)})
     return redirect(url_for("admin"))
 
+@app.route("/edit_question")
+def edit_question():
+    return render_template("edit-question.html",
+                           av_questions=mongo.db.av_questions.find())
 
-    
+@app.route("/update_question",methods=['POST'])
+def update_question():
+    question_id = request.form.get("chooseQuestion"),
+    update = mongo.db.av_questions
+    update.update_one({"_id": ObjectId(question_id)},
+                      {"$set": {
+                        "Question": request.form.get("editQuestionAdd"),
+                        "Answer_First": request.form.get("editAnswerAdd"),
+                        "Answer_Second": request.form.get("editAnswerAddSecond")  
+                      }})
+    return redirect(url_for("admin"))
+
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
