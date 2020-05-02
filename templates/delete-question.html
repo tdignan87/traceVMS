@@ -4,13 +4,13 @@
 <section class="container options-container">
     <h2>Delete Question</h2>
     <h4 class="alert-delete">Please note deleting a record will permanetly remove it from the system.</h4>
-    <form>
+    <form action="{{ url_for('remove_question') }}" method="POST">
         <div class="form-group row">
-            <label for="dropdown" class="dropdown-visitor" name="companyName">Please select question you wish to delete:</label>
-            <select class="form-control" name="deleteCompany">
+            <label for="dropdown" class="dropdown-visitor" name="question">Please select question you wish to delete:</label>
+            <select class="form-control" name="removeQuestion">
                     <option disabled selected value></option>
                     {% for question in av_questions %}
-                <option value="{{company._id}}" required>{{question.Question}}</option>
+                <option value="{{question._id}}" required>{{question.Question}}</option>
                 {% endfor %}
             </select>
             <div class="form-group row ">
