@@ -35,14 +35,15 @@ def signin():
 """ Administrator login page to access admin menu for CRUD """
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
-    users = mongo.db.users
-    error = None
+    users = mongo.db.users.find_one()
     if request.method == "POST":
-        if request.form["username"] == users.username and request.form["password"] == users.password:
-            error = "Invalid Credentials, please try again"
+        if users.username == request.form.get("username"):
+             return render_template ("admin.html")
         else:
-            return redirect(url_for("admin"))
-    return render_template("login.html", error=error)
+             return render_template("login.html")
+    return render_template("admin.html")
+
+      
     
 """ Add signed in visitor details to database """
 @app.route("/add_visitor",methods=['POST'])
