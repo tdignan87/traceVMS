@@ -455,7 +455,7 @@ The sub main logo was sourced at:
 
 - [Tom Holmes](http://www.tom-holmes.co.uk/?LMCL=zjuU4x)
 
-- All of the content on the page was written by me with reference to BRC standard Food_8_Interpretation_English. This was provided to be my Ewelina Kwitek the Quality Manager at Paterson Arran.
+ All of the content on the page was written by me with reference to BRC standard Food_8_Interpretation_English. This was provided to be my Ewelina Kwitek the Quality Manager at Paterson Arran.
 - [BRC](https://www.brc.org.uk/)
 
 ## Acknowledgements
