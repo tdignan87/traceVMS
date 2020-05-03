@@ -229,10 +229,10 @@ Password | password | text | string
 --- | --- | --- | ---
 visitorsID | _id | none | ObjectId
 Name | name | text| string
-Company | company |  | string
-Visiting | visiting | string
-entered_bakery| entered_Bakery| boolean
-sign_in_timestamp|sign_in_timestamp| timestamp
+Company | company | text | string
+Visiting | visiting | text |string
+entered_bakery| entered_Bakery| boolean | bool
+sign_in_timestamp|sign_in_timestamp| timestamp |timestamp
 
 #### Contractors
 
