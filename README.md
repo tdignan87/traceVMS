@@ -204,7 +204,7 @@ Throughout the design process
 
 ## Flow Chart
 
-This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.
+This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.<br>
 User flowchart:
 <img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/flowchart-one.jpg" target="_blank" rel=""/>
 
