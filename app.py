@@ -24,7 +24,7 @@ def admin():
     return render_template("admin.html")
 
 
-""" Find and display questions and contractors in dropdown choices """
+"""Find and display questions and contractors in dropdown choices."""
 @app.route("/sign_in")
 def signin():
     return render_template("signin.html",
@@ -32,7 +32,7 @@ def signin():
                            contractors=mongo.db.contractors.find())
 
 
-""" Administrator login page to access admin menu for CRUD """
+"""Administrator login page to access admin menu for CRUD"""
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
     if request.method == "POST":
@@ -49,7 +49,7 @@ def adminlogin():
     return render_template("login.html")
             
     
-""" Add signed in visitor details to database """
+"""Add signed in visitor details to database."""
 @app.route("/add_visitor",methods=['POST'])
 def add_visitor():
     dateTimeObj = datetime.now()
@@ -62,6 +62,36 @@ def add_visitor():
     mongo.db.visitors.insert_one(add_new_visitor)
     return render_template("main.html")
 
+"""Return edit visitor page with visitors and contractors dropdown populated."""
+@app.route("/edit_visitor")
+def edit_visitor():
+    return render_template("edit-visitor.html",
+                           visitors=mongo.db.visitors.find(),
+                           contractors=mongo.db.contractors.find())
+    
+"""Update visitors based on input from the edit visitors page."""
+@app.route("/amend_visitor",methods=['POST'])
+def amend_visitor():
+    visitor_id = request.form.get("chooseName")
+    update = mongo.db.visitors
+    update.update_one ({"_id": ObjectId(visitor_id)},
+                       {"$set":{
+                            "company": request.form.get("visitorCompany"),
+                            "visiting": request.form.get("editVisiting")
+                       }})
+    return redirect(url_for("admin"))
+                                       
+@app.route("/delete")
+def delete():
+    return render_template("delete-visitor.html",
+                           visitors=mongo.db.visitors.find())                  
+
+"""Delete visitor from the system"""
+@app.route("/delete_visitor",methods=['POST'])
+def delete_visitor():
+    visitor_id = request.form.get("deleteName")
+    mongo.db.visitors.remove({"_id": ObjectId(visitor_id)})
+    return redirect(url_for("admin"))
 
 @app.route("/add_company")
 def addcompany():
@@ -75,6 +105,38 @@ def insert_company():
                     "approved":request.form.get("approveRadios")}
     mongo.db.contractors.insert_one(company_doc)
     return redirect(url_for("admin"))
+
+@app.route("/edit_company")
+def edit_company():
+    return render_template("edit-company.html",
+                           contractors=mongo.db.contractors.find()) 
+   
+@app.route("/update_company",methods=['POST'])
+def update_company():
+    company_id = request.form.get("chooseCompany")
+    update = mongo.db.contractors
+    update.update_one({"_id": ObjectId(company_id)},
+                      {"$set": {
+                          "Address": request.form.get("editCompAddress"),
+                          "approved": request.form.get("approveRadios")
+                      }})
+    return redirect(url_for("admin"))
+
+@app.route("/delete_company")
+def delete_company():
+    return render_template("delete-company.html",
+                           contractors=mongo.db.contractors.find())
+
+@app.route("/delete_company_record",methods=['POST'])
+def delete_company_record():
+    company_id = request.form.get("deleteCompany")
+    mongo.db.contractors.remove({'_id': ObjectId(company_id)})
+    return redirect(url_for("admin"))   
+    
+    
+    
+    
+    
     
 @app.route("/insert_question")
 def insert_question():
@@ -107,61 +169,9 @@ def sign_out_visitor():
     }})
     return redirect(url_for("home"))
                     
-@app.route("/edit_visitor")
-def edit_visitor():
-    return render_template("edit-visitor.html",
-                           visitors=mongo.db.visitors.find(),
-                           contractors=mongo.db.contractors.find())
-    
-@app.route("/amend_visitor",methods=['POST'])
-def amend_visitor():
-    visitor_id = request.form.get("chooseName")
-    update = mongo.db.visitors
-    update.update_one ({"_id": ObjectId(visitor_id)},
-                       {"$set":{
-                            "company": request.form.get("visitorCompany"),
-                            "visiting": request.form.get("editVisiting")
-                       }})
-    return redirect(url_for("admin"))
-                       
-                       
-@app.route("/delete")
-def delete():
-    return render_template("delete-visitor.html",
-                           visitors=mongo.db.visitors.find())                  
 
-@app.route("/delete_visitor",methods=['POST'])
-def delete_visitor():
-    visitor_id = request.form.get("deleteName")
-    mongo.db.visitors.remove({"_id": ObjectId(visitor_id)})
-    return redirect(url_for("admin"))
                                            
-@app.route("/edit_company")
-def edit_company():
-    return render_template("edit-company.html",
-                           contractors=mongo.db.contractors.find()) 
-   
-@app.route("/update_company",methods=['POST'])
-def update_company():
-    company_id = request.form.get("chooseCompany")
-    update = mongo.db.contractors
-    update.update_one({"_id": ObjectId(company_id)},
-                      {"$set": {
-                          "Address": request.form.get("editCompAddress"),
-                          "approved": request.form.get("approveRadios")
-                      }})
-    return redirect(url_for("admin"))
 
-@app.route("/delete_company")
-def delete_company():
-    return render_template("delete-company.html",
-                           contractors=mongo.db.contractors.find())
-
-@app.route("/delete_company_record",methods=['POST'])
-def delete_company_record():
-    company_id = request.form.get("deleteCompany")
-    mongo.db.contractors.remove({'_id': ObjectId(company_id)})
-    return redirect(url_for("admin"))
 
 @app.route("/edit_question")
 def edit_question():
