@@ -212,9 +212,13 @@ User flowchart:
 Administrator options:
 <img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/admin_options.jpg" target="_blank" rel=""/>
 
-## Features
+# Features
 
-## Information Architecture
+
+
+
+
+# Information Architecture
 
 ### Database Choice
 
