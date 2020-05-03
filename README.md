@@ -466,7 +466,7 @@ The sub main logo was sourced at:
 
  - Big thanks to my mentor [Simen Daehlin](https://github.com/Eventyret) for his invaluable support as always.
  - Thank you to my fellow student [Cecilia Binck](https://www.linkedin.com/in/cecilia-binck-657b6977/)  for testing my UI and giving pointers and advice.
- - Thank you to Ewelina Kwitek (QA manager at Paterson Arran Ltd) [Ewelina Kwitek](https://www.linkedin.com/in/ewelina-kwitek-55950b2b/) for providing me with the BRC standard and giving advice as to what content the project should have to suit users in the food industry.
+ - Thank you to [Ewelina Kwitek](https://www.linkedin.com/in/ewelina-kwitek-55950b2b/) for providing me with the BRC standard and giving advice as to what content the project should have to suit users in the food industry.
  
 
 
