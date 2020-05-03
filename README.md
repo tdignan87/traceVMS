@@ -214,6 +214,16 @@ Administrator options:
 
 # Features
 
+## Existing Features
+
+- Navbar
+    - The navigation bar features the TraceSense logo in the top left corner.
+    - For users using the app there is a list of navbar options available regardless of the page loaded. These are:
+    1. Home
+    2. Admin Panel
+    3. Dashboard
+
+    The navbar is collapsed into a burger icon on smaller displays.  The navbar is not fixed to the top of the page as the user scrolls as space is important, particularly when users are signing in as there could be lots of questions set up in the system.
 
 
 
