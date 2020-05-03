@@ -49,7 +49,7 @@ def adminlogin():
            else:
                return redirect(url_for("login"))
             
-        return "Invalid username or password combination"
+        return render_template("login.html")
     return render_template("login.html")
             
     
@@ -197,6 +197,25 @@ def remove_question():
     question_id = request.form.get("removeQuestion")
     question_table.remove({"_id": ObjectId(question_id)})
     return redirect(url_for("admin"))
+
+
+"""Get values from database for visitors and display on page for only signed in visitors"""
+
+@app.route("/dashboard_load",methods=['GET'])
+def dash_load():
+       visitors = visitor_table.find({},{"name":1,
+                                        "sign_out_timestamp":1})
+       
+       dateTime = datetime.now()
+       
+       return render_template("dashboard.html", visitors = visitors,
+                              dateTime = dateTime)
+   
+        
+   
+    
+                           
+
 
 if __name__ == "__main__":
     app.run(debug=True)
