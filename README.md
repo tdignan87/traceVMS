@@ -26,10 +26,6 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 2. [Features](#example)
     - [Existing Features](#background)
-        - [Register Visitor Page](#background)
-        - [Admin Page](#background)
-        - [About Page](#background)
-        - [Administrator Login Page](#background)
     - [Features Deployed](#background)
     - [Features Left To Implement](#background)
 
@@ -201,6 +197,10 @@ Links to be updated
 - [Tablet Add New Visitor Page](https://ibb.co/sqj60xb)
 - [Tablet Edit Visitor Page](https://ibb.co/sqj60xb)
 - [Tablet Delete Page](https://ibb.co/sqj60xb)
+
+## Wireframe design changes
+
+Throughout the design process 
 
 ## Flow Chart
 
