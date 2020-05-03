@@ -219,25 +219,27 @@ TraceVMS relies on the following structure
 
 | Title | Key in db | form validation type | Data type |
 --- | --- | --- | --- 
-AccountID | _id | None | ObjectId 
-Name | username | text, `maxlength="40"` | string
-Password | password | text, `maxlength="15"` | string
+admin_id | _id | None | ObjectId 
+Name | username | text | string
+Password | password | text | string
 
 #### Visitors On Site
 
 |Title | Key in db| form validation type| data type |
 --- | --- | --- | ---
 visitorsID | _id | none | ObjectId
-Name | name | text, maxlength="100"| string
-Induction | induction | checkbox | boolean
-Company | company | maxlength=150" | string
+Name | name | text| string
+Company | company |  | string
+Visiting | visiting | string
+entered_bakery| entered_Bakery| boolean
+sign_in_timestamp|sign_in_timestamp| timestamp
 
 #### Contractors
 
 |Title| Key in db | form validation type | data type |
 --- | --- | --- | ---
 contractorID | _id | none | ObjectId
-Name| companyName| text, maxlength="150"|string 
+Name| companyName| text|string 
 Liability Insurance Date Renewal | libRenewal| timepicker | datetime
 Policy statement | polStatement | timepicker | datetime
 Approved| isApproved| checkbox | boolean
@@ -247,5 +249,5 @@ Approved| isApproved| checkbox | boolean
 |Title| Key in db| form validation type| data type |
 --- | --- | --- | ---
 questionID | _id| none | Objectid
-Question| question | text, maxlength= "200" | string
-Answer | answer| text, maxlength="5" | string
+Question| question | tex, maxlength= "200" | string
+Answer | answer| text | string
