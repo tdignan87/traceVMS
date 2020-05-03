@@ -18,13 +18,13 @@ Tracesense is my own company i created in November 2019 and decided to go with t
     - [User Goals](#user-goals)
     - [Business Goals](#business-goals)
     - [Developer Goals](#developer-goals)
-    - [User Requirements & Expectations](#user-stories)
-        - [Design Choices](#user-stories)
+    - [User Requirements & Expectations](#customer-stories)
+        - [Design Choices](#design-choices)
     - [WireFrames](#wireframes)
-    - [Flow Chart](#flow)
+    - [Flow Chart](#flowchart)
     
 
-2. [Features](#example)
+2. [Features](#features)
     - [Existing Features](#background)
     - [Features Deployed](#background)
     - [Features Left To Implement](#background)
