@@ -216,6 +216,8 @@ Administrator options:
 
 ## Existing Features
 
+### Features on every page:
+
 - Navbar
     - The navigation bar features the TraceSense logo in the top left corner.
     - For users using the app there is a list of navbar options available regardless of the page loaded. These are:
@@ -223,7 +225,50 @@ Administrator options:
     2. Admin Panel
     3. Dashboard
 
-    The navbar is collapsed into a burger icon on smaller displays.  The navbar is not fixed to the top of the page as the user scrolls as space is important, particularly when users are signing in as there could be lots of questions set up in the system.
+
+### Features on main page:
+ The navbar is collapsed into a burger icon on smaller displays.  The navbar is not fixed to the top of the page as the user scrolls as space is important, particularly when users are signing in as there could be lots of questions set up in the system.
+
+### Features on sign in page for visitors:
+A user can select if they are entering the bakery and if so the page will expand with questions which have been set up in the Administrator page. User answers the questions and must acknlowedge that they have read them before signing it. Once the checkbox is checked then the user can sign into the site.
+
+The page will only display in the companies list companies which are on the approved list. Any company which is rejected will not appear on the list.
+
+### Features for sign out page:
+Sign out page will display a dropdown of visitors currently on site (not signed out). User selects there name and then signs out via the button. Simple form, simple design. Bootstrap buttons used for updating or returning to the previous page.
+
+
+
+
+### Administrator page ( requires authentication via login form)
+Administrator page uses bootstrap buttons for menu options and is very easy to navigate around. Administrator page allows users to add new questions, edit, delete, add new companies, edit, delete and edit or delete visitors. 
+
+
+### Dashboard
+Dashboard will display what users are currently on site. The dashboard can be accessed by anyone and does not need admin credentials.
+
+## Features Left to Implement
+
+1. Email Authentication
+- Allow administrator to create another administration account if they want to allocate more than one account.
+
+2. Email Notifications
+- Once visitor selects who they are on site to visit then an email should be sent to that individual notifying them that a visitor is at reception with the details entered in the app.
+
+3. Notifications
+- Ability to add to contractors table fields for renewal dates for certificates and email a dedicated account when the certificates have been expired. If this is done then the administrator can change the contractor to rejected if the expiry date is elapsed.
+
+4. Inductions
+- Ability to ask the visitor if they have completed a site induction prior to entering. If they press no, then the system will complete the induction there and then. Once completed then the visitor signs this off along with there company representative on the app and this is updated in the database. A date is stored for a year/ or an appropriate time for renewal and the app will prompt when this is due.
+
+5. Reports functionality
+- Option for a reports section in the navbar where a user can go to access specific data such as the number of visitors in the last 30 days as an example. Reports can be fixed with parameters to enter for the report to query the data. 
+
+6. Fire Register
+- The app should allow a list of current users on site to quickly generate for printing in the event of site requiring a list for the fire register in the event of an evacuation.
+
+7. Badge Printing
+- It would be a good "nice to have" if once a visitor is signed into site then the app can connect to a printer and print a visitors badge.
 
 
 
