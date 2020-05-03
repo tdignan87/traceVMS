@@ -35,13 +35,22 @@ def signin():
 """ Administrator login page to access admin menu for CRUD """
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
-    users = mongo.db.users.find_one()
     if request.method == "POST":
-        if users.username == request.form.get("username"):
-             return render_template ("admin.html")
-        else:
-             return render_template("login.html")
-    return render_template("admin.html")
+        users = mongo.db.users
+        login_user = users.find_one({"username": request.form["username"]})
+        if login_user:
+           if request.form ["password"] ==  login_user["password"]:
+               
+               return redirect(url_for("admin"))
+           else:
+               return redirect(url_for("login"))
+            
+        return "Invalid username or password combination"
+    return render_template("login.html")
+            
+        
+   
+       
 
       
     
