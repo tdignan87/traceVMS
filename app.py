@@ -216,11 +216,5 @@ def dash_load():
                               dateTime = dateTime,
                               visitors_in_bakery = visitors_in_bakery)
    
-        
-   
-    
-                           
-
-
 if __name__ == "__main__":
     app.run(debug=True)
