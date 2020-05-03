@@ -354,7 +354,7 @@ Answer_Second | Answer_Second| text | string
 The project uses HTML,CSS, Javascript and python programming languages.
 
 # Testing
-
+To be completed
 # Deployment
 
 ## How to run this project locally
@@ -447,6 +447,29 @@ SECRET_KEY | `<your_secret_key>`
 9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
 
 10. The site is now successfully deployed.
+
+# Credits
+
+### Content
+
+The sub main logo was sourced at:
+ - [securly](https://www.securly.com/visitor)
+
+ The company main logo i had developed by Tom Holmes an independent graphics designer:
+
+- [Tom Holmes](http://www.tom-holmes.co.uk/?LMCL=zjuU4x)
+
+- All of the content on the page was written by me with reference to BRC standard Food_8_Interpretation_English. This was provided to be my Ewelina Kwitek the Quality Manager at Paterson Arran.
+- [BRC](https://www.brc.org.uk/)
+
+## Acknowledgements
+
+ - Big thanks to my mentor [Simen Daehlin](https://github.com/Eventyret) for his invaluable support as always.
+ - Thank you to my fellow student [Cecilia Binck](https://www.linkedin.com/in/cecilia-binck-657b6977/)  for testing my UI and giving pointers and advice.
+ - Thank you to Ewelina Kwitek (QA manager at Paterson Arran Ltd) [Ewelina Kwitek](https://www.linkedin.com/in/ewelina-kwitek-55950b2b/) for providing me with the BRC standard and giving advice as to what content the project should have to suit users in the food industry.
+ 
+
+
 
 
 
