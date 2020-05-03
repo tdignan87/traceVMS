@@ -409,7 +409,7 @@ pip -r requirements.txt.
 python app.py
 ```
 
-9. You can visit the website at `http://127.0.0.1:5000`
+9. You can visit the website at `http://127.0.0.1:5000
 
 ## Heroku Deployment
 
@@ -446,3 +446,8 @@ SECRET_KEY | `<your_secret_key>`
 9. In the "Manual Deployment" section of this page, made sure the master branch is selected and then click "Deploy Branch".
 
 10. The site is now successfully deployed.
+
+
+
+
+
