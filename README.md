@@ -25,9 +25,8 @@ Tracesense is my own company i created in November 2019 and decided to go with t
     
 
 2. [Features](#features)
-    - [Existing Features](#background)
-    - [Features Deployed](#background)
-    - [Features Left To Implement](#background)
+    - [Existing Features](#existing-features)
+    - [Features Left To Implement](#features-left-to-implement)
 
 
 3. [Information Architecture](#information-architecture)
