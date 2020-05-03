@@ -222,6 +222,7 @@ TraceVMS relies on the following structure
 admin_id | _id | None | ObjectId 
 Name | username | text | string
 Password | password | text | string
+role | role | text | string
 
 #### Visitors On Site
 
@@ -239,9 +240,8 @@ sign_in_timestamp|sign_in_timestamp| timestamp |timestamp
 |Title| Key in db | form validation type | data type |
 --- | --- | --- | ---
 contractorID | _id | none | ObjectId
-Name| companyName| text|string 
-Liability Insurance Date Renewal | libRenewal| timepicker | datetime
-Policy statement | polStatement | timepicker | datetime
+Name| Name| text|string 
+Address | Address| text | string
 Approved| isApproved| checkbox | boolean
 
 #### Questions
@@ -249,5 +249,6 @@ Approved| isApproved| checkbox | boolean
 |Title| Key in db| form validation type| data type |
 --- | --- | --- | ---
 questionID | _id| none | Objectid
-Question| question | tex, maxlength= "200" | string
-Answer | answer| text | string
+Question| question | text | string
+Answer_First | Answer_First| text | string
+Answer_Second | Answer_Second| text | string
