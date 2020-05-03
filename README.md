@@ -45,6 +45,21 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 5. [Testing](#testing)
 
+6. [Deployment]
+    - [Heroku Deployment](#background)
+    - [How to run this project locally](#background)
+
+7. [Credits]
+    - [Content]
+    - [Media]
+    - [Code]
+    - [Acknowledgements]
+
+8. [Contact]
+
+9. [Disclamer]
+  
+
 ----
 
 # UX
