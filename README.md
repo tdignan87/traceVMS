@@ -191,7 +191,7 @@ Links to be updated
 
 This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.
 User flowchart:
-<img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/flowchart.jpg" target="_blank" rel=""/>
+<img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/flowchart-one.jpg" target="_blank" rel=""/>
 
 
 Administrator options:
