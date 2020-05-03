@@ -238,8 +238,6 @@ The page will only display in the companies list companies which are on the appr
 Sign out page will display a dropdown of visitors currently on site (not signed out). User selects there name and then signs out via the button. Simple form, simple design. Bootstrap buttons used for updating or returning to the previous page.
 
 
-
-
 ### Administrator page ( requires authentication via login form)
 Administrator page uses bootstrap buttons for menu options and is very easy to navigate around. Administrator page allows users to add new questions, edit, delete, add new companies, edit, delete and edit or delete visitors. 
 
@@ -270,6 +268,8 @@ Dashboard will display what users are currently on site. The dashboard can be ac
 7. Badge Printing
 - It would be a good "nice to have" if once a visitor is signed into site then the app can connect to a printer and print a visitors badge.
 
+8. Image capturing
+- The ability to capture a image of the visitor via the device camera and store this into the database.
 
 
 
