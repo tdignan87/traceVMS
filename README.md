@@ -198,7 +198,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during the
 
 ## Wireframe design changes
 
-Throughout the design process 
+Throughout the design process i decided to move the logo from the top right and allocate the navbar across all pages. This made design quicker and easier.
 
 ## Flow Chart
 
