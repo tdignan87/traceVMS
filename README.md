@@ -14,10 +14,10 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 ## Table of Contents
 1. [UX](#ux)
-    - [Project Goals](#example2)
-    - [User Goals](#third-example)
-    - [Business Goals](#fourth-examplehttpwwwfourthexamplecom)
-    - [Developer Goals](#fourth-examplehttpwwwfourthexamplecom)
+    - [Project Goals](#project-goals)
+    - [User Goals](#user-goals)
+    - [Business Goals](#business-goals)
+    - [Developer Goals](#developer-goals)
     - [User Requirements & Expectations](#user-stories)
         - [Design Choices](#user-stories)
     - [WireFrames](#wireframes)
