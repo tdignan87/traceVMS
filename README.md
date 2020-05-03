@@ -349,3 +349,65 @@ Answer_Second | Answer_Second| text | string
 - [Flask](https://flask.palletsprojects.com/en/1.0.x/) to construct and render pages.
 - [Jinja](http://jinja.pocoo.org/docs/2.10/) to simplify displaying data from the backend of this project smoothly and effectively in html.
 - [Google Fonts](https://fonts.google.com/) to style the website fonts.
+
+### Languages
+The project uses HTML,CSS, Javascript and python programming languages.
+
+# Testing
+
+# Deployment
+
+## How to run this project locally
+
+To run this project on your own IDE follow the instructions below:
+
+Ensure you have the following tools: 
+- An IDE such as [Visual Studio Code](https://code.visualstudio.com/)
+
+The following **must be installed** on your machine:
+- [PIP](https://pip.pypa.io/en/stable/installing/)
+- [Python 3](https://www.python.org/downloads/)
+- [Git](https://gist.github.com/derhuerst/1b15ff4652a867391f03)
+- An account at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) or MongoDB running locally on your machine. 
+    - How to set up your Mongo Atlas account [here](https://docs.atlas.mongodb.com/).
+
+### Instructions
+1. Save a copy of the github repository located at https://github.com/AJGreaves/familyhub by clicking the "download zip" button at the top of the page and extracting the zip file to your chosen folder. If you have Git installed on your system, you can clone the repository with the following command.
+```
+git clone https://github.com/AJGreaves/familyhub
+
+2. If possible open a terminal session in the unzip folder or cd to the correct location.
+
+3. A virtual environment is recommended for the Python interpreter, I recommend using Pythons built in virtual environment. Enter the command:
+```
+python -m .venv venv
+```  
+_NOTE: Your Python command may differ, such as python3 or py_
+
+4. Activate the .venv with the command:
+```
+.venv\Scripts\activate 
+```
+_Again this **command may differ depending on your operating system**, please check the [Python Documentation on virtual environments](https://docs.python.org/3/library/venv.html) for further instructions._
+
+4. If needed, Upgrade pip locally with
+```
+pip install --upgrade pip.
+```
+
+5. Install all required modules with the command 
+```
+pip -r requirements.txt.
+```
+
+6. In your local IDE create a file called `.flaskenv`.
+
+7. Inside the .flaskenv file, create a SECRET_KEY variable and a MONGO_URI to link to your own database. Please make sure to call your database `familyHub`, with 2 collections called `users` and `activities`. You will find example json structures for these collections in the [schemas](familyhubapp/data/schemas) folder.
+
+8. You can now run the application with the command
+```
+python app.py
+```
+
+9. You can visit the website at `http://127.0.0.1:5000`
+
