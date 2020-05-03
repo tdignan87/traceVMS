@@ -10,7 +10,7 @@
 TraceVMS was created by myself as I noticed through my day job that most factories and food companies use paper based systems for recording visitors to the site.
 I can see the headache of paper based systems from working in the manufacturing industry for over 10 years. TraceVMS hopes to help with that problem by recording visitor and contractor information to help with record keeping, reduce paperwork and adhere to food safety compliance(BRC).
 
-Tracesense is my own company i created in November 2019 and decided to go with that name for the software.
+Tracesense is my own company i created in November 2019 and decided to go with that name for the software although its purely created for educational purposes.
 
 ## Table of Contents
 1. [UX](#example)
