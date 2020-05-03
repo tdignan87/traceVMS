@@ -36,7 +36,7 @@ def signin():
                            contractors=contractor_table.find())
 
 
-"""Administrator login page to access admin menu for CRUD"""
+"""Administrator login page to access admin menu . Username is 'sysdba' and password is 'masterkey'"""
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
     if request.method == "POST":
