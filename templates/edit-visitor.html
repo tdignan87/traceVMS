@@ -14,7 +14,7 @@
                 {% endif %}
                 {% endfor %}
             </select>
-            <label for="dropdown" class="dropdown-company" name="visitorCompany">visitor Company:</label>
+            <label for="dropdown" class="dropdown-company" name="visitorCompany">Visitor company:</label>
             <select class="form-control" name="visitorCompany">
                     <option disabled selected value></option>
                     {% for company in contractors %}
@@ -23,6 +23,7 @@
             </select>
             <label for="colFormVisiting" class="col-form-label">Visiting:</label>
             <div class="col-sm-12">
+
                 <input type="text" class="form-control" id="colFormVisiting" name="editVisiting" required>
             </div>
         </div>
