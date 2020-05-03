@@ -13,7 +13,7 @@ I can see the headache of paper based systems from working in the manufacturing 
 Tracesense is my own company i created in November 2019 and decided to go with that name for the software although its purely created for educational purposes.
 
 ## Table of Contents
-1. [UX](#example)
+1. [UX](#ux)
     - [Project Goals](#example2)
     - [User Goals](#third-example)
     - [Business Goals](#fourth-examplehttpwwwfourthexamplecom)
