@@ -271,7 +271,8 @@ Dashboard will display what users are currently on site. The dashboard can be ac
 8. Image capturing
 - The ability to capture a image of the visitor via the device camera and store this into the database.
 
-
+9. Answer Questions
+- Once database is changed to SQL, set the ability to allow answers for questions to be strict or not. IF they are strict, then if selected they will not permit a user to access site. A report should be available showing the users details along with the questions and relevant answers.
 
 # Information Architecture
 
