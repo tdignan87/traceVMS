@@ -411,6 +411,7 @@ python app.py
 
 9. You can visit the website at `http://127.0.0.1:5000
 
+```
 ## Heroku Deployment
 
 To deploy traceVMS to heroku, take the following steps:
