@@ -48,11 +48,6 @@ def adminlogin():
         return "Invalid username or password combination"
     return render_template("login.html")
             
-        
-   
-       
-
-      
     
 """ Add signed in visitor details to database """
 @app.route("/add_visitor",methods=['POST'])
