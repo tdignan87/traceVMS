@@ -140,3 +140,11 @@ body {
 .alert-delete {
     color: #ff0000;
 }
+
+.visitCountDash {
+    text-align: center;
+}
+
+.breadcrumb-item {
+    text-align: center;
+}
