@@ -208,8 +208,13 @@ def dash_load():
        
        dateTime = datetime.now()
        
+       visitors_in_bakery = visitor_table.find({},{"name":1,
+                                        "sign_out_timestamp":1,
+                                        "entered_bakery":1})
+       
        return render_template("dashboard.html", visitors = visitors,
-                              dateTime = dateTime)
+                              dateTime = dateTime,
+                              visitors_in_bakery = visitors_in_bakery)
    
         
    
