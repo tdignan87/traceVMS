@@ -468,7 +468,11 @@ The sub main logo was sourced at:
  - Thank you to my fellow student [Cecilia Binck](https://www.linkedin.com/in/cecilia-binck-657b6977/)  for testing my UI and giving pointers and advice.
  - Thank you to [Ewelina Kwitek](https://www.linkedin.com/in/ewelina-kwitek-55950b2b/) for providing me with the BRC standard and giving advice as to what content the project should have to suit users in the food industry.
  
+# Contact
+To contact me feel free to email me at tdignan87@gmail.com
 
+## Disclamer
+The content of this website is for educational purposes only.
 
 
 
