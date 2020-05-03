@@ -34,8 +34,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
     - [Database choice](#database-choice)
     - [Data Storage Types](#data-storage-types)
     - [Collections Data Structure](#collections-data-structure)
-        - [Users Collection](#users-collection)
-        - [Activities Collection](#activities-collection)
+   
 
 4. [Technologies Used](#technologies-used)
 
@@ -332,3 +331,21 @@ questionID | _id| none | Objectid
 Question| question | text | string
 Answer_First | Answer_First| text | string
 Answer_Second | Answer_Second| text | string
+
+# Technologies Used
+
+### Tools
+
+- [Visual Studio Code](https://code.visualstudio.com/) is the IDE used for developing this project. 
+- [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) is the database for this project
+- [GitHub](https://github.com/) to store and share all project code remotely. 
+- [Balsamiq](https://balsamiq.com/) used to create the wireframes for my project.
+
+### Libraries
+
+- [JQuery](https://jquery.com) to simplify DOM manipulation.
+- [Bootstrap](https://www.bootstrapcdn.com/) to simplify the structure of the website and make the website responsive easily.
+- [PyMongo](https://api.mongodb.com/python/current/) to make communication between Python and MongoDB possible.
+- [Flask](https://flask.palletsprojects.com/en/1.0.x/) to construct and render pages.
+- [Jinja](http://jinja.pocoo.org/docs/2.10/) to simplify displaying data from the backend of this project smoothly and effectively in html.
+- [Google Fonts](https://fonts.google.com/) to style the website fonts.
