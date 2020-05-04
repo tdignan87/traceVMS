@@ -63,9 +63,10 @@ def add_visitor():
     add_new_visitor = {"name": request.form.get("visitorName"),
                        "company":request.form.get("visitorCompany"),
                        "visiting":request.form.get("visitorRepresent"),
-                       "entered_bakery":request.form.get("gridRadios"),
+                       "entered_bakery":bool(request.form.get("gridRadios")),
                        "company_representative":request.form.get("companyRepresent"),
                        "sign_in_timestamp": dateTimeObj}
+     
     mongo.db.visitors.insert_one(add_new_visitor)
     return render_template("main.html")
 
