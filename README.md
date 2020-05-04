@@ -269,6 +269,9 @@ Dashboard will display what users are currently on site. The dashboard can be ac
 9. Answer Questions
 - Once database is changed to SQL, set the ability to allow answers for questions to be strict or not. IF they are strict, then if selected they will not permit a user to access site. A report should be available showing the users details along with the questions and relevant answers.
 
+10. Timer for dashboard
+- Add a timer to the dashboard so the page automatically refreshes with the database queries and updates with the latest content. This will be useful for companies who would want to keep the dashboard on display(large TV in reception) as an example.
+
 # Information Architecture
 
 ### Database Choice
