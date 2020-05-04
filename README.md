@@ -354,7 +354,13 @@ The project uses HTML,CSS, Javascript and python programming languages.
 1. Automatic testing was not done for this project.
 2. HTML,CSS,Javascript and Python was validated using online vaidators. These were:
 
-- 
+-[W3C Markup Validation Service](https://validator.w3.org/) for HTML and CSS
+-[Esprima JS Syntax Validator](https://esprima.org/demo/validate.html) for Javascript
+-[PEP8 Online](http://pep8online.com/) for python code
+
+No issues were found apart from HTML validator flagging errors for the use of Jina in the HTML file.
+
+Any features added were tested after implementation for this project. Any bugs that were identified were fixed during development. 
 
 
 # Deployment
