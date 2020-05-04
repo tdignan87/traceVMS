@@ -16,7 +16,7 @@
         <select class="form-control" name="visitorCompany">
                 <option disabled selected value></option>
                 {% for comp in contractors %}
-                {% if comp.approved == 'true' %}
+                {% if comp.approved == true %}
             <option>{{comp.Name}}</option>
             {% endif %}
             {% endfor %}
@@ -47,7 +47,7 @@
                 </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="false">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="">
                         <label class="form-check-label" for="gridRadios2">
                   No
                 </label>

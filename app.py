@@ -118,7 +118,7 @@ Add new company details into DB
 def insert_company():
     company_doc = {"Name": request.form.get("newCompanyName"),
                    "Address": request.form.get("newCompanyAddress"),
-                    "approved":request.form.get("approveRadios")}
+                    "approved":bool(request.form.get("approveRadios"))}
     contractor_table.insert_one(company_doc)
     return redirect(url_for("admin"))
 
@@ -133,8 +133,8 @@ def update_company():
     update = contractor_table
     update.update_one({"_id": ObjectId(company_id)},
                       {"$set": {
-                          "Address": request.form.get("editCompAddress"),
-                          "approved": request.form.get("approveRadios")
+                          "Address":request.form.get("editCompAddress"),
+                          "approved":bool(request.form.get("approveRadios"))
                       }})
     return redirect(url_for("admin"))
 
