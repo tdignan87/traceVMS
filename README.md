@@ -350,7 +350,13 @@ Answer_Second | Answer_Second| text | string
 The project uses HTML,CSS, Javascript and python programming languages.
 
 # Testing
-To be completed
+
+1. Automatic testing was not done for this project.
+2. HTML,CSS,Javascript and Python was validated using online vaidators. These were:
+
+- 
+
+
 # Deployment
 
 ## How to run this project locally
