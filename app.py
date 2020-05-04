@@ -219,7 +219,7 @@ def dash_load():
        visitors = visitor_table.find({},{"name":1,
                                         "sign_out_timestamp":1,
                                         "company":1})
-       
+                                    
        dateTime = datetime.now()
        return render_template("dashboard.html", visitors = visitors,
                               dateTime = dateTime)
