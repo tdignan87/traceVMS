@@ -272,6 +272,9 @@ Dashboard will display what users are currently on site. The dashboard can be ac
 10. Timer for dashboard
 - Add a timer to the dashboard so the page automatically refreshes with the database queries and updates with the latest content. This will be useful for companies who would want to keep the dashboard on display(large TV in reception) as an example.
 
+11. Dashboard information
+- More information to display what companies are not approved, total number of visitors on site, number of visitors for the week etc.
+
 # Information Architecture
 
 ### Database Choice
