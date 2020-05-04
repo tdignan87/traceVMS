@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, request, redirect, session
+from flask import Flask, render_template, url_for, request, redirect, flash,  session
 import os
 import bcrypt
 from flask_pymongo import PyMongo
@@ -46,9 +46,12 @@ def adminlogin():
         if login_user:
            if request.form ["password"] ==  login_user["password"]:
                
+               
                return redirect(url_for("admin"))
            else:
+               flash("Login failed please try again")
                return redirect(url_for("login"))
+            
             
         return render_template("login.html")
     return render_template("login.html")
