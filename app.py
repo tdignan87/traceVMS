@@ -136,6 +136,8 @@ def update_company():
                           "Address":request.form.get("editCompAddress"),
                           "approved":bool(request.form.get("approveRadios"))
                       }})
+    
+    
     return redirect(url_for("admin"))
 
 @app.route("/delete_company")
