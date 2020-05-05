@@ -3,37 +3,32 @@
 
 {% extends 'base.html' %} {% block content %}
 <div class=" jumbotron jumbotron-fluid ">
-    <div class="container col-md-6 ">
-        <h1 class="display-4 ">traceVMS</h1>
-    </div>
-    <div class="container col-md-6 ">
-        <h1 class="lead ">Visitor & Contract Management System</h1>
-    </div>
+    <img class="trace-vms-logo">
 </div>
 
 <div class="container " id="option-text ">
-    <h2>please select an option </h2>
+    <h2 class="card-title">Please select an option </h2>
 
 
     <div class="row " id="main-container ">
         <div class="col-md-6 mb-5 ">
             <div class="card ">
-                <h5 class="card-header ">Sign In</h5>
+
                 <div class="card-body ">
-                    <h5 class="card-title ">Visitor & Contractor Sign In</h5>
+                    <h5 class="card-title ">Visitor & Contractor Sign In to Site</h5>
                     <p class="card-text ">If your not doing any work on the fabric or material of the building sign in as a <strong>visitor</strong>. <br>if <strong> you are</strong> doing any work on the material or fabric of the building sign in as a <strong>contractor</strong>.</p>
-                    <a href="{{ url_for('signin') }}" class="btn btn-primary " id="visitor-sign-btn">Sign In</a>
+                    <a href="{{ url_for('signin') }}" class="btn btn-primary btn-block" id="visitor-sign-btn">Sign In</a>
                 </div>
             </div>
 
         </div>
         <div class="col-md-6 mb-5 ">
             <div class="card ">
-                <h5 class="card-header ">Sign Out</h5>
+
                 <div class="card-body ">
                     <h5 class="card-title ">Visitor & Contractor Sign Out</h5>
                     <p class="card-text ">All <strong>visitors</strong> and <strong>contractors</strong> must sign out when leaving the site. Thank you for visiting. </p>
-                    <a href="{{ url_for('sign_out')}}" class="btn btn-success " id="contractor-sign-btn">Sign Out</a>
+                    <a href="{{ url_for('sign_out')}}" class="btn btn-success btn-block " id="contractor-sign-btn">Sign Out</a>
                 </div>
             </div>
 

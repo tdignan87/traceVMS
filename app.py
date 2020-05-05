@@ -20,28 +20,76 @@ contractor_table = MONGO.db.contractors
 visitor_table = MONGO.db.visitors
 users_table = MONGO.db.users
 
+
 @app.route("/")
 def home():
+    """
+    Renders page that user will see on first load.
+    """
     return render_template("main.html")
 
 @app.route("/admin_panel")
 def admin():
     return render_template("admin.html")
 
-"""
-Find and display questions and contractors in dropdown choices.
-"""
-@app.route("/sign_in")
+@app.route("/signin/visitor",methods=['GET','POST'])
 def signin():
-    return render_template("signin.html",
+    """
+    Loads the sign in page and populates the dropdown fields from DB.
+    Find and display questions and contractors in dropdown choices. POSTS data to database once saved.
+    """
+    if request.method == "POST":
+        dateTimeObj = datetime.now()
+        add_new_visitor = {"name": request.form.get("visitorName"),
+                       "company":request.form.get("visitorCompany"),
+                       "visiting":request.form.get("visitorRepresent"),
+                       "entered_bakery":bool(request.form.get("gridRadios")),
+                       "company_representative":request.form.get("companyRepresent"),
+                       "sign_in_timestamp": dateTimeObj}
+        visitor_table.insert_one(add_new_visitor)
+        return render_template("main.html")
+    else:
+        return render_template("signin.html",
                            av_questions=question_table.find(),
                            contractors=contractor_table.find())
+        
+        
+@app.route("/edit/visitor",methods=['GET','POST'])
+def edit_visitor():
+    """
+    Renders page for editing visitors detail and posts changes back to the database.
+    """
+    if request.method == "POST":
+        visitor_id = request.form.get("chooseName")
+        update = visitor_table
+        update.update_one ({"_id": ObjectId(visitor_id)},
+                       {"$set":{
+                            "company": request.form.get("visitorCompany"),
+                            "visiting": request.form.get("editVisiting")
+                       }})
+        return redirect(url_for("admin"))
+    else:
+        return render_template("edit-visitor.html",
+                           visitors=visitor_table.find(),
+                           contractors=contractor_table.find())
+    
+@app.route("/delete/visitor",methods=['GET','POST'])
+def delete_visitor():
+    """ Renders delete page and allows deletion of visitor record """
+    if request.method == "POST":
+        visitor_id = request.form.get("deleteName")
+        visitor_table.remove({"_id": ObjectId(visitor_id)})
+        return redirect(url_for("admin"))
+    else:
+        return render_template("delete-visitor.html",
+                           visitors=visitor_table.find()) 
+        
 
-"""
-Administrator login page to access admin menu . Username is 'sysdba' and password is 'masterkey'
-"""
-@app.route("/admin_login",methods=['GET','POST'])
+@app.route("/admin/login",methods=['GET','POST'])
 def adminlogin():
+    """ 
+    Admin render page, if correct credentials are entered page will load the dashboard.
+    """
     if request.method == "POST":
         users = users_table
         login_user = users.find_one({"username": request.form["username"]})
@@ -58,59 +106,7 @@ def adminlogin():
         return render_template("login.html")
     return render_template("login.html")
             
-"""
-Add signed in visitor details to database.
-"""
-@app.route("/add_visitor",methods=['POST'])
-def add_visitor():
-    
-    dateTimeObj = datetime.now()
-    add_new_visitor = {"name": request.form.get("visitorName"),
-                       "company":request.form.get("visitorCompany"),
-                       "visiting":request.form.get("visitorRepresent"),
-                       "entered_bakery":bool(request.form.get("gridRadios")),
-                       "company_representative":request.form.get("companyRepresent"),
-                       "sign_in_timestamp": dateTimeObj}
-     
-    visitor_table.insert_one(add_new_visitor)
-    return render_template("main.html")
-
-"""
-Return edit visitor page with visitors and contractors dropdown populated.
-"""
-@app.route("/edit_visitor")
-def edit_visitor():
-    return render_template("edit-visitor.html",
-                           visitors=visitor_table.find(),
-                           contractors=contractor_table.find())
-    
-"""
-Update visitors based on input from the edit visitors page.
-"""
-@app.route("/amend_visitor",methods=['POST'])
-def amend_visitor():
-    visitor_id = request.form.get("chooseName")
-    update = visitor_table
-    update.update_one ({"_id": ObjectId(visitor_id)},
-                       {"$set":{
-                            "company": request.form.get("visitorCompany"),
-                            "visiting": request.form.get("editVisiting")
-                       }})
-    return redirect(url_for("admin"))
                                        
-@app.route("/delete")
-def delete():
-    return render_template("delete-visitor.html",
-                           visitors=visitor_table.find())                  
-
-"""
-Delete visitor from the system
-"""
-@app.route("/delete_visitor",methods=['POST'])
-def delete_visitor():
-    visitor_id = request.form.get("deleteName")
-    visitor_table.remove({"_id": ObjectId(visitor_id)})
-    return redirect(url_for("admin"))
 
 @app.route("/add_company")
 def addcompany():
