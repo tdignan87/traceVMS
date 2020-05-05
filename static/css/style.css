@@ -19,8 +19,8 @@ body {
     background-color: #42BFE0;
 }
 
-.display-4 {
-    float: right;
+.trace-vms-logo {
+    background-image: url("/static/img/traceVMS_RGB.png");
 }
 
 .lead {
@@ -152,3 +152,9 @@ body {
 #answer-questions-warning {
     text-align: center;
 }
+
+.card-title {
+    text-align: center;
+}
+
+#questionaire-set {}
