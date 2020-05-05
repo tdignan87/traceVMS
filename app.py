@@ -26,11 +26,11 @@ def home():
     """
     Renders page that user will see on first load.
     """
-    return render_template("main.html")
+    return render_template("pages/main.html")
 
 @app.route("/admin/panel")
 def admin():
-    return render_template("admin.html")
+    return render_template("pages/admin.html")
 
 @app.route("/signin/visitor",methods=['GET','POST'])
 def signin():
@@ -47,9 +47,9 @@ def signin():
                        "company_representative":request.form.get("companyRepresent"),
                        "sign_in_timestamp": dateTimeObj}
         visitor_table.insert_one(add_new_visitor)
-        return render_template("main.html")
+        return render_template("pages/main.html")
     else:
-        return render_template("signin.html",
+        return render_template("pages/signin.html",
                            av_questions=question_table.find(),
                            contractors=contractor_table.find())
         
@@ -69,7 +69,7 @@ def edit_visitor():
                        }})
         return redirect(url_for("admin"))
     else:
-        return render_template("edit-visitor.html",
+        return render_template("pages/edit-visitor.html",
                            visitors=visitor_table.find(),
                            contractors=contractor_table.find())
     
@@ -83,7 +83,7 @@ def delete_visitor():
         visitor_table.remove({"_id": ObjectId(visitor_id)})
         return redirect(url_for("admin"))
     else:
-        return render_template("delete-visitor.html",
+        return render_template("pages/delete-visitor.html",
                            visitors=visitor_table.find()) 
         
 
@@ -105,8 +105,8 @@ def adminlogin():
                return redirect(url_for("login"))
             
             
-        return render_template("login.html")
-    return render_template("login.html")
+        return render_template("pages/login.html")
+    return render_template("pages/login.html")
             
                               
 @app.route("/insert/new/company",methods=['GET','POST'])
@@ -121,7 +121,7 @@ def add_company():
         contractor_table.insert_one(company_doc)
         return redirect(url_for("admin"))
     else:
-        return render_template("add-company.html")
+        return render_template("pages/add-company.html")
 
 @app.route("/edit/company",methods=['GET','POST'])
 def edit_company():
@@ -138,7 +138,7 @@ def edit_company():
                       }})
         return redirect(url_for("admin"))
     else:
-        return render_template("edit-company.html",
+        return render_template("pages/edit-company.html",
                            contractors=contractor_table.find()) 
    
 @app.route("/delete/company",methods=['GET','POST'])
@@ -151,7 +151,7 @@ def delete_company():
         contractor_table.remove({'_id': ObjectId(company_id)})
         return redirect(url_for("admin"))
     else:
-        return render_template("delete-company.html",
+        return render_template("pages/delete-company.html",
                            contractors=contractor_table.find())
 
 
@@ -167,7 +167,7 @@ def insert_question():
         question_table.insert_one(add_new_question)
         return redirect(url_for("admin"))
     else:
-        return render_template("add-questions.html")
+        return render_template("pages/add-questions.html")
 
                     
 @app.route("/edit/question",methods=['GET','POST'])
@@ -186,7 +186,7 @@ def edit_question():
                       }})
         return redirect(url_for("admin"))
     else:
-        return render_template("edit-question.html",
+        return render_template("pages/edit-question.html",
                            av_questions=question_table.find())
 
 
@@ -200,7 +200,7 @@ def delete_question():
         question_table.remove({"_id": ObjectId(question_id)})
         return redirect(url_for("admin"))
     else:
-        return render_template("delete-question.html",
+        return render_template("pages/delete-question.html",
                            av_questions=question_table.find())
 
 """ Renders page that shows visitors on site based on db query."""
@@ -211,7 +211,7 @@ def dash_load():
                                         "company":1})
                                     
        dateTime = datetime.now()
-       return render_template("dashboard.html", visitors = visitors,
+       return render_template("pages/dashboard.html", visitors = visitors,
                               dateTime = dateTime)
                               
 @app.route("/signout/visitor",methods=['GET','POST'])
@@ -230,7 +230,7 @@ def sign_out():
         }})
         return redirect(url_for("home"))
     else:
-        return render_template("sign-out.html",
+        return render_template("pages/sign-out.html",
                            visitors=visitor_table.find())
     
     
