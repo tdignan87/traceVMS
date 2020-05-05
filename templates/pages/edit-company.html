@@ -1,0 +1,57 @@
+{% extends "layouts/base.html" %} {% block content %}
+
+
+<section class="container options-container">
+    <h2>Edit Company Details</h2>
+    <form action="{{ url_for('edit_company') }}" method="POST">
+        <div class="form-group row">
+            <label for="dropdown" class="dropdown-visitor" name="companyName">Please select company:</label>
+            <select class="form-control" name="chooseCompany">
+                    <option disabled selected value></option>
+                    {% for company in contractors %}
+                <option value="{{company._id}}" required>{{company.Name}}</option>
+                {% endfor %}
+            </select>
+            <label for="editCompAddress" class="col-form-label">Company Address:</label>
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="colFormVisiting" name="editCompAddress" required>
+            </div>
+        </div>
+
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label">Company Approved?</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="approveRadios" id="editGridRadios1" value="true">
+                        <label class="form-check-label" for="gridRadios1">
+              Approved
+            </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="approveRadios" id="editGridRadios2" value="">
+                        <label class="form-check-label" for="gridRadios2">
+              Rejected
+            </label>
+
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+        <div class="form-group row ">
+            <div class="col-sm-12 ">
+                <button type="submit " class="btn btn-primary btn-block" id="edit-company-btn">Update</button>
+                <a href="{{ url_for('admin')}}" class="btn btn-danger btn-block">Cancel</a>
+            </div>
+        </div>
+
+
+    </form>
+
+</section>
+
+
+
+
+{% endblock %}
