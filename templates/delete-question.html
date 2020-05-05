@@ -4,7 +4,7 @@
 <section class="container options-container">
     <h2>Delete Question</h2>
     <h4 class="alert-delete">Please note deleting a record will permanetly remove it from the system.</h4>
-    <form action="{{ url_for('remove_question') }}" method="POST">
+    <form action="{{ url_for('delete_question') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-visitor" name="question">Please select question you wish to delete:</label>
             <select class="form-control" name="removeQuestion">
