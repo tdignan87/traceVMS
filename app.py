@@ -28,7 +28,7 @@ def home():
     """
     return render_template("main.html")
 
-@app.route("/admin_panel")
+@app.route("/admin/panel")
 def admin():
     return render_template("admin.html")
 
@@ -75,7 +75,9 @@ def edit_visitor():
     
 @app.route("/delete/visitor",methods=['GET','POST'])
 def delete_visitor():
-    """ Renders delete page and allows deletion of visitor record """
+    """ 
+    Renders delete page and allows deletion of visitor record 
+    """
     if request.method == "POST":
         visitor_id = request.form.get("deleteName")
         visitor_table.remove({"_id": ObjectId(visitor_id)})
@@ -88,7 +90,7 @@ def delete_visitor():
 @app.route("/admin/login",methods=['GET','POST'])
 def adminlogin():
     """ 
-    Admin render page, if correct credentials are entered page will load the dashboard.
+    Admin render page, if correct credentials are entered page will load the admin panel to allow CRUD.
     """
     if request.method == "POST":
         users = users_table
@@ -106,118 +108,103 @@ def adminlogin():
         return render_template("login.html")
     return render_template("login.html")
             
-                                       
-
-@app.route("/add_company")
-def addcompany():
-    return render_template("add-company.html")
-
-"""
-Add new company details into DB
-"""
-@app.route("/insert_company", methods=['POST'])
-def insert_company():
-    company_doc = {"Name": request.form.get("newCompanyName"),
+                              
+@app.route("/insert/new/company",methods=['GET','POST'])
+def add_company():
+    """ 
+    Renders page for inserting a new company and saves data into the database.
+    """
+    if request.method == "POST":
+        company_doc = {"Name": request.form.get("newCompanyName"),
                    "Address": request.form.get("newCompanyAddress"),
                     "approved":bool(request.form.get("approveRadios"))}
-    contractor_table.insert_one(company_doc)
-    return redirect(url_for("admin"))
+        contractor_table.insert_one(company_doc)
+        return redirect(url_for("admin"))
+    else:
+        return render_template("add-company.html")
 
-@app.route("/edit_company")
+@app.route("/edit/company",methods=['GET','POST'])
 def edit_company():
-    return render_template("edit-company.html",
-                           contractors=contractor_table.find()) 
-   
-@app.route("/update_company",methods=['POST'])
-def update_company():
-    company_id = request.form.get("chooseCompany")
-    update = contractor_table
-    update.update_one({"_id": ObjectId(company_id)},
+    """ 
+    Renders edit company page and saves amended data into the database.
+    """
+    if request.method == "POST":
+        company_id = request.form.get("chooseCompany")
+        update = contractor_table
+        update.update_one({"_id": ObjectId(company_id)},
                       {"$set": {
                           "Address":request.form.get("editCompAddress"),
                           "approved":bool(request.form.get("approveRadios"))
                       }})
-    
-    
-    return redirect(url_for("admin"))
-
-@app.route("/delete_company")
+        return redirect(url_for("admin"))
+    else:
+        return render_template("edit-company.html",
+                           contractors=contractor_table.find()) 
+   
+@app.route("/delete/company",methods=['GET','POST'])
 def delete_company():
-    return render_template("delete-company.html",
+    """ 
+    Renders delete company page and deletes record from database once submitted
+    """
+    if request.method == "POST":
+        company_id = request.form.get("deleteCompany")
+        contractor_table.remove({'_id': ObjectId(company_id)})
+        return redirect(url_for("admin"))
+    else:
+        return render_template("delete-company.html",
                            contractors=contractor_table.find())
 
-@app.route("/delete_company_record",methods=['POST'])
-def delete_company_record():
-    company_id = request.form.get("deleteCompany")
-    contractor_table.remove({'_id': ObjectId(company_id)})
-    return redirect(url_for("admin"))   
-    
-@app.route("/insert_question")
-def insert_question():
-    return render_template("add-questions.html")
 
+@app.route("/insert/question",methods=['GET','POST'])
+def insert_question():
     """
-    Add New Questions into DB
+     Renders insert questions page and saves new values into database 
     """
-@app.route("/add_question", methods=['POST'])
-def add_question():
-    add_new_question = {"Question": request.form.get("newQuestionAdd"),
+    if request.method == "POST":
+        add_new_question = {"Question": request.form.get("newQuestionAdd"),
                         "Answer_First": request.form.get("newAnswerAdd"),
                         "Answer_Second": request.form.get("newAnswerAddSecond")}
-    question_table.insert_one(add_new_question)
-    return redirect(url_for("admin"))
+        question_table.insert_one(add_new_question)
+        return redirect(url_for("admin"))
+    else:
+        return render_template("add-questions.html")
 
-@app.route("/sign_out")
-def sign_out():
-    return render_template("sign-out.html",
-                           visitors=visitor_table.find())
-    """
-    Update visitor table by adding in signed out timestamp
-    """
-@app.route("/sign_out_visitor",methods=['POST'])
-def sign_out_visitor():
-    visitor_id = request.form.get("signOutName")
-    dateTimeObj = datetime.now()
-    signout = visitor_table
-    signout.update_one ({"_id": ObjectId(visitor_id)},
-                           {"$set":{
-        "sign_out_timestamp":dateTimeObj 
-    }})
-    return redirect(url_for("home"))
                     
-@app.route("/edit_question")
+@app.route("/edit/question",methods=['GET','POST'])
 def edit_question():
-    return render_template("edit-question.html",
-                           av_questions=question_table.find())
-
-@app.route("/update_question",methods=['POST'])
-def update_question():
-    question_id = request.form.get("amendQuestion")
-    update = question_table
-    update.update_one({"_id": ObjectId(question_id)},
+    """ 
+    Renders edit questions page and saves updated values into database.
+    """
+    if request.method == "POST":
+        question_id = request.form.get("amendQuestion")
+        update = question_table
+        update.update_one({"_id": ObjectId(question_id)},
                       {"$set": {
                         "Question": request.form.get("editQuestionAdd"),
                         "Answer_First": request.form.get("editAnswerAdd"),
                         "Answer_Second": request.form.get("editAnswerAddSecond")  
                       }})
-    return redirect(url_for("admin"))
-
-@app.route("/delete_question")
-def delete_question():
-    return render_template("delete-question.html",
+        return redirect(url_for("admin"))
+    else:
+        return render_template("edit-question.html",
                            av_questions=question_table.find())
 
-@app.route("/remove_question",methods=['POST'])
-def remove_question():
-    question_id = request.form.get("removeQuestion")
-    question_table.remove({"_id": ObjectId(question_id)})
-    return redirect(url_for("admin"))
 
-"""
-Get values from database for visitors and display on page for only signed in visitors
-"""
+@app.route("/delete/question",methods=['GET','POST'])
+def delete_question():
+    """ 
+    Renders delete question page and deletes question once submitted.
+     """
+    if request.method == "POST":
+        question_id = request.form.get("removeQuestion")
+        question_table.remove({"_id": ObjectId(question_id)})
+        return redirect(url_for("admin"))
+    else:
+        return render_template("delete-question.html",
+                           av_questions=question_table.find())
 
-@app.route("/dashboard_load",methods=['GET'])
+""" Renders page that shows visitors on site based on db query."""
+@app.route("/dashboard/load",methods=['GET'])
 def dash_load():
        visitors = visitor_table.find({},{"name":1,
                                         "sign_out_timestamp":1,
@@ -227,5 +214,25 @@ def dash_load():
        return render_template("dashboard.html", visitors = visitors,
                               dateTime = dateTime)
                               
+@app.route("/signout/visitor",methods=['GET','POST'])
+def sign_out():
+    """ 
+    Renders page for signing out visitor. Once visitor signs out a timestamp is added to DB 
+    """
+
+    if request.method == "POST":
+        visitor_id = request.form.get("signOutName")
+        dateTimeObj = datetime.now()
+        signout = visitor_table
+        signout.update_one ({"_id": ObjectId(visitor_id)},
+                           {"$set":{
+        "sign_out_timestamp":dateTimeObj 
+        }})
+        return redirect(url_for("home"))
+    else:
+        return render_template("sign-out.html",
+                           visitors=visitor_table.find())
+    
+    
 if __name__ == "__main__":
     app.run(debug=True)
