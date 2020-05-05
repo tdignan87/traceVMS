@@ -1,5 +1,5 @@
-from flask import Flask, render_template, url_for, request, redirect, flash,  session
 import os
+from flask import Flask, render_template, url_for, request, redirect, flash,  session
 import bcrypt
 from flask_pymongo import PyMongo
 from datetime import datetime
@@ -12,12 +12,13 @@ app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
 
-mongo = PyMongo(app)
+MONGO = PyMongo(app)
 
 # constants
-question_table = mongo.db.av_questions
-contractor_table = mongo.db.contractors
-visitor_table = mongo.db.visitors
+question_table = MONGO.db.av_questions
+contractor_table = MONGO.db.contractors
+visitor_table = MONGO.db.visitors
+users_table = MONGO.db.users
 
 @app.route("/")
 def home():
@@ -42,7 +43,7 @@ Administrator login page to access admin menu . Username is 'sysdba' and passwor
 @app.route("/admin_login",methods=['GET','POST'])
 def adminlogin():
     if request.method == "POST":
-        users = mongo.db.users
+        users = users_table
         login_user = users.find_one({"username": request.form["username"]})
         if login_user:
            if request.form ["password"] ==  login_user["password"]:
@@ -71,7 +72,7 @@ def add_visitor():
                        "company_representative":request.form.get("companyRepresent"),
                        "sign_in_timestamp": dateTimeObj}
      
-    mongo.db.visitors.insert_one(add_new_visitor)
+    visitor_table.insert_one(add_new_visitor)
     return render_template("main.html")
 
 """
@@ -129,7 +130,7 @@ def insert_company():
 @app.route("/edit_company")
 def edit_company():
     return render_template("edit-company.html",
-                           contractors=mongo.db.contractors.find()) 
+                           contractors=contractor_table.find()) 
    
 @app.route("/update_company",methods=['POST'])
 def update_company():
