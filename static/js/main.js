@@ -1,4 +1,15 @@
 let confirmCheck = document.getElementById("noticeCheckbox");
+let questions = document.getElementById("exampleFormControlSelect");
+
+
+$("#questions-asked").change(function() {
+
+    if (questions.selectedIndex == "1") {
+        console.log("Rejected Selected");
+    } else {
+        console.log("Pass Selected");
+    }
+})
 
 /**
  * Hide questions section of signin page if visiting bakery checkbox is not checked.
@@ -49,25 +60,3 @@ $("#noticeCheckbox").click(function() {
         $("#visit-only-btn").hide();
     }
 })
-
-/**
- * If the questions answer is Yes, then flag a warning message and hide the ability to sign into the site. 
- */
-$("#exampleFormControlSelect").change(function() {
-
-    if ($("#exampleFormControlSelect").children("option:selected").val() == "Yes") {
-        alert("Please notify site contact as conditions have failed for entering the site. Only proceed if company has still given you permission to enter site.");
-        $("#visit-only-btn").hide();
-    } else if (confirmCheck.checked == true) {
-        $("#visit-only-btn").show();
-    } else {
-        console.log("console log test");
-        $("#visit-only-btn").hide();
-    }
-
-})
-
-$("#selected-option-val").on("change", function() {
-    console.log("option selected") // Work in progress
-
-});
