@@ -58,7 +58,7 @@ def signin():
 def edit_visitor():
     """
     Renders page for editing visitors detail and posts changes back to the database.
-    """
+    """    
     if request.method == "POST":
         visitor_id = request.form.get("chooseName")
         update = visitor_table
