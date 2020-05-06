@@ -149,10 +149,10 @@ body {
     text-align: center;
 }
 
-#answer-questions-warning {
+.card-title {
     text-align: center;
 }
 
-.card-title {
+.alert-msg {
     text-align: center;
 }
