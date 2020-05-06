@@ -7,10 +7,10 @@
     <form action="{{ url_for('delete_company') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-visitor" name="companyName">Please select company you wish to delete:</label>
-            <select class="form-control" name="deleteCompany">
+            <select class="form-control" name="deleteCompany" required>
                     <option disabled selected value></option>
                     {% for company in contractors %}
-                <option value="{{company._id}}" required>{{company.Name}}</option>
+                <option value="{{company._id}}">{{company.Name}}</option>
                 {% endfor %}
             </select>
             <div class="form-group row ">
