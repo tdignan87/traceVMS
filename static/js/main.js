@@ -50,20 +50,19 @@ $("#noticeCheckbox").click(function() {
     }
 })
 
-
-
 /**
  * If the questions answer is Yes, then flag a warning message and hide the ability to sign into the site. 
  */
 $("#exampleFormControlSelect").change(function() {
 
-    if ($(this).children("option:selected").val() == "Yes") {
+    if ($("#exampleFormControlSelect").children("option:selected").val() == "Yes") {
         alert("Please notify site contact as conditions have failed for entering the site. Only proceed if company has still given you permission to enter site.");
         $("#visit-only-btn").hide();
     } else if (confirmCheck.checked == true) {
         $("#visit-only-btn").show();
     } else {
         console.log("console log test");
+        $("#visit-only-btn").hide();
     }
 
 })
