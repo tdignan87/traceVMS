@@ -156,3 +156,18 @@ body {
 .alert-msg {
     text-align: center;
 }
+
+#questionaire-set {
+    background-color: #f8f8ff;
+    border-style: groove;
+}
+
+.safety-card {
+    background-color: #f8f8ff;
+    border-style: ridge;
+}
+
+#contractor-section {
+    background-color: #f0f8ff;
+    border-style: ridge;
+}
