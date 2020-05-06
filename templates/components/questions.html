@@ -6,11 +6,11 @@
     </div>
     <div class="form-group " id="questions-asked">
         {% for question in av_questions %}
-        <label for="exampleFormControlSelect " class="header-pointers ">{{question.Question}}<span style="color:#ff0000"> *</span> </label>
-        <select class="form-control " id="exampleFormControlSelect" required>
+        <label for="exampleFormControlSelect" class="header-pointers ">{{question.Question}}<span style="color:#ff0000"> *</span> </label>
+        <select class="form-control select-options-visitor" id="exampleFormControlSelect" required>
             <option value="" selected disabled >Please select</option>
-            <option value="">{{question.Answer_First}}</option>
-            <option value="">{{question.Answer_Second}}</option>
+            <option value="{{question.Answer_First}}">{{question.Answer_First}}</option>
+            <option value="{{question.Answer_Second}}">{{question.Answer_Second}}</option>
           
         </select> {% endfor %}
     </div>
