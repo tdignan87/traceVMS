@@ -6,8 +6,10 @@ $("#questions-asked").change(function() {
 
     if (questions.selectedIndex == "1") {
         console.log("Rejected Selected");
+        $("#confirmation-container").hide();
     } else {
         console.log("Pass Selected");
+        $("#confirmation-container").show();
     }
 })
 
