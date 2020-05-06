@@ -1,5 +1,8 @@
 let confirmCheck = document.getElementById("noticeCheckbox");
 let questions = document.getElementById("exampleFormControlSelect");
+let questionValue = document.getElementById("selected-option-val");
+let editQuestionAdd = document.getElementById("colFormLabelFirst");
+
 
 
 $("#questions-asked").change(function() {
@@ -8,13 +11,24 @@ $("#questions-asked").change(function() {
         console.log("Rejected Selected");
         $("#confirmation-container").hide();
         $("#visit-only-btn").hide();
-        alert("Please consult site representative as you cannot enter the factory");
+        alert("Please consult site representative as you cannot enter the factory based on the value selected.");
+        $("#exampleFormControlSelect".disabled = true);
 
     } else {
         console.log("Pass Selected");
         $("#confirmation-container").show();
+        $("#exampleFormControlSelect".disabled = false);
     }
 })
+
+$("#selected-option-val").change(function() {
+    let questionResult = questionValue.options[questionValue.selectedIndex].text;
+    editQuestionAdd.value = questionResult;
+
+})
+
+
+
 
 /**
  * Hide questions section of signin page if visiting bakery checkbox is not checked.
