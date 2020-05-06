@@ -8,8 +8,8 @@
     <div class="form-group ">
         {% for question in av_questions %}
         <label for="exampleFormControlSelect " class="header-pointers ">{{question.Question}}</label>
-        <select class="form-control " id="exampleFormControlSelect">
-        <option value=" " selected disabled required>Please select</option>
+        <select class="form-control " id="exampleFormControlSelect" required>
+        <option value=" " selected disabled >Please select</option>
           <option value="">{{question.Answer_First}}</option>
           <option value="">{{question.Answer_Second}}</option>
           
