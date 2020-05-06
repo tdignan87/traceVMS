@@ -7,10 +7,10 @@
     <form action="{{ url_for('delete_question') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-visitor" name="question">Please select question you wish to delete:</label>
-            <select class="form-control" name="removeQuestion">
+            <select class="form-control" name="removeQuestion" required>
                     <option disabled selected value></option>
                     {% for question in av_questions %}
-                <option value="{{question._id}}" required>{{question.Question}}</option>
+                <option value="{{question._id}}">{{question.Question}}</option>
                 {% endfor %}
             </select>
             <div class="form-group row ">
