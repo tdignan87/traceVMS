@@ -13,7 +13,7 @@
         </div>
 
         <label for="dropdown" class="dropdown-company" name="visitorCompany">Please select your company from dropdown:</label>
-        <select class="form-control" name="visitorCompany">
+        <select class="form-control" name="visitorCompany" required>
                 <option disabled selected value></option>
                 {% for comp in contractors %}
                 {% if comp.approved == true %}
