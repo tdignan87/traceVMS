@@ -8,6 +8,7 @@ $("#questions-asked").change(function() {
         console.log("Rejected Selected");
         $("#confirmation-container").hide();
         $("#visit-only-btn").hide();
+        $("option[value='opt01']")
     } else {
         console.log("Pass Selected");
         $("#confirmation-container").show();
