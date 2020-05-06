@@ -1,26 +1,29 @@
 {% extends "layouts/base.html" %} {% block content %}
 
 
-<div class="container-fluid options-container">
+<div class="flex-container options-container">
     <form action="{{ url_for('dash_load') }}" method="GET">
-        <h1 class="mt-4">Visitor & Contractor Dashboard</h1>
-
-
+        <h1 class="mt-4">Visitors on site</h1>
         <div class="row">
-            <div class="col-xl-12">
-                <div class="card mb-4">
+            <div class="col-md-4 mb-5">
+                <div class="card h-100">
                     <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Visitors On Site:</div>
                     <div class="card-body">
                         {% for visitor in visitors %} {% if visitor.sign_out_timestamp is not defined %}
                         <h2 class="visitCountDash" name="visitorTodayList">{{visitor["name"]}}</h2>
+                        <div class="card-footer small text-muted">{{visitor["company"]}}</div>
                         {% endif %} {% endfor %}
-                        <div class="card-footer small text-muted">{{dateTime}}</div>
                     </div>
+
                 </div>
+
+
             </div>
+
         </div>
 
     </form>
+
 </div>
 
 

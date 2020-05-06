@@ -81,7 +81,6 @@ body {
     margin: 0 0 15px;
 }
 
-.form-control,
 .btn {
     min-height: 38px;
     border-radius: 2px;
@@ -135,6 +134,7 @@ body {
     padding-bottom: 1rem;
     text-align: center;
     padding-left: 1rem;
+    justify-content: center;
 }
 
 .alert-delete {
@@ -156,5 +156,3 @@ body {
 .card-title {
     text-align: center;
 }
-
-#questionaire-set {}
