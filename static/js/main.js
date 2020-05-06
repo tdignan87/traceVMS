@@ -10,6 +10,7 @@ window.onload = function() {
         $("#visit-only-btn").hide();
         $("#confirmation-container").hide();
         $("#answer-questions-warning").hide();
+        $(".alert-msg").hide();
     }
     /**
      * hide sections of the page and only show depending on whats selected on the radio button
@@ -22,6 +23,12 @@ $('input:radio[name="gridRadios"]').change(
             $("#visit-only-btn").hide();
             $("#confirmation-container").show();
             $("#answer-questions-warning").show();
+            $(".alert-msg").show();
+
+
+            if (this.checked && this.value == 'true') {
+                top.location.href = "#questionaire-set"
+            }
 
         } else {
             $("#questionaire-set").hide();
@@ -36,13 +43,14 @@ $('input:radio[name="gridRadios"]').change(
  */
 $("#noticeCheckbox").click(function() {
     if (confirmCheck.checked == true) {
-
         $("#visit-only-btn").show();
         top.location.href = "#sign-in-container"
     } else {
         $("#visit-only-btn").hide();
     }
 })
+
+
 
 /**
  * If the questions answer is Yes, then flag a warning message and hide the ability to sign into the site. 
@@ -59,3 +67,8 @@ $("#exampleFormControlSelect").change(function() {
     }
 
 })
+
+$("#selected-option-val").on("change", function() {
+    console.log("option selected") // Work in progress
+
+});
