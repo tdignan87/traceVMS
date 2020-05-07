@@ -6,7 +6,7 @@
     <form action="{{ url_for('edit_visitor') }}" method="POST">
         <div class="form-group row">
             <label for="dropdown" class="dropdown-visitor" name="visitorName">Please select visitors name:</label>
-            <select class="form-control" name="chooseName" required>
+            <select class="form-control" name="chooseName" id="edit-visitor-dropdown" required>
                     <option disabled selected value></option>
                     {% for visitor in visitors %}
                     {% if visitor.sign_out_timestamp is not defined %}
