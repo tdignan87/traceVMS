@@ -2,6 +2,7 @@ let confirmCheck = document.getElementById("noticeCheckbox");
 let questions = document.getElementById("exampleFormControlSelect");
 let questionValue = document.getElementById("selected-option-val");
 let editQuestionAdd = document.getElementById("colFormLabelFirst");
+let visitorValue = document.getElementById("edit-visitor-dropdown");
 
 
 
@@ -21,14 +22,14 @@ $("#questions-asked").change(function() {
     }
 })
 
+
+
+
 $("#selected-option-val").change(function() {
     let questionResult = questionValue.options[questionValue.selectedIndex].text;
     editQuestionAdd.value = questionResult;
 
 })
-
-
-
 
 /**
  * Hide questions section of signin page if visiting bakery checkbox is not checked.
@@ -68,6 +69,9 @@ $('input:radio[name="gridRadios"]').change(
             $("#answer-questions-warning").hide();
         }
     });
+
+
+
 /**
  * If checkbox is checked for visiting bakery then show the sign in button and move to the top of the page.
  */
