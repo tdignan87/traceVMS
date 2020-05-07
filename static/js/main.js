@@ -22,9 +22,6 @@ $("#questions-asked").change(function() {
     }
 })
 
-
-
-
 $("#selected-option-val").change(function() {
     let questionResult = questionValue.options[questionValue.selectedIndex].text;
     editQuestionAdd.value = questionResult;
