@@ -472,7 +472,7 @@ SECRET_KEY | `<your_secret_key>`
 The sub main logo was sourced at:
  - [securly](https://www.securly.com/visitor)
 
- The company main logo i had developed by Tom Holmes an independent graphics designer:
+ The company main logo i had developed by Tom Holmes an independent graphics designer.
 
 - [Tom Holmes](http://www.tom-holmes.co.uk/?LMCL=zjuU4x)
 
