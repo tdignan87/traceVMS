@@ -19,10 +19,6 @@ body {
     background-color: #42BFE0;
 }
 
-.trace-vms-logo {
-    background-image: url("/static/img/traceVMS_RGB.png");
-}
-
 .lead {
     float: right;
 }
@@ -170,4 +166,10 @@ body {
 #contractor-section {
     background-color: #add8e6;
     border-style: ridge;
+}
+
+#return-home-btn {
+    background-color: #0069A8;
+    border-style: groove;
+    color: #fafafa;
 }
