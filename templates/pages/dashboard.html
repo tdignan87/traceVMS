@@ -2,26 +2,20 @@
 
 
 <div class="flex-container options-container">
+    <h1 class="dash-header">Visitors on site</h1>
     <form action="{{ url_for('dash_load') }}" method="GET">
-        <h1 class="mt-4">Visitors on site</h1>
         <div class="row">
-            <div class="col-md-4 mb-5">
-                <div class="card h-100">
-                    <div class="card-header"><i class="fas fa-chart-area mr-1"></i>Visitors On Site:</div>
+            {% for visitor in visitors %} {% if visitor.sign_out_timestamp is not defined %}
+            <div class="col-sm-4 mb-5">
+                <div class="card">
                     <div class="card-body">
-                        {% for visitor in visitors %} {% if visitor.sign_out_timestamp is not defined %}
-                        <h2 class="visitCountDash" name="visitorTodayList">{{visitor["name"]}}</h2>
-                        <div class="card-footer small text-muted">{{visitor["company"]}}</div>
-                        {% endif %} {% endfor %}
+                        <h5 class="card-title">{{visitor["name"]}}</h5>
+                        <p class="card-text"><strong>Company: {{visitor["company"]}}</strong> </p>
                     </div>
-
                 </div>
-
-
             </div>
-
+            {% endif %} {% endfor %}
         </div>
-
     </form>
 
 </div>
