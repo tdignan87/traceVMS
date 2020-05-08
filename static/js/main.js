@@ -1,37 +1,13 @@
 let confirmCheck = document.getElementById("noticeCheckbox");
-let questions = document.getElementById("exampleFormControlSelect");
-let questionValue = document.getElementById("selected-option-val");
+let questions = document.querySelector(".select-options");
 let editQuestionAdd = document.getElementById("colFormLabelFirst");
 let visitorValue = document.getElementById("edit-visitor-dropdown");
 
 
 
-$("#questions-asked").change(function() {
-
-    if (questions.selectedIndex == "1") {
-        console.log("Rejected Selected");
-        $("#confirmation-container").hide();
-        $("#visit-only-btn").hide();
-        alert("Please consult site representative as you cannot enter the factory based on the value selected.");
-        $(".select-options-visitor").prop("disabled", true);
-
-    } else {
-        console.log("Pass Selected");
-        $("#confirmation-container").show();
-        $(".select-options-visitor").prop("disabled", false);
-    }
-})
-
-$("#selected-option-val").change(function() {
-    let questionResult = questionValue.options[questionValue.selectedIndex].text;
-    editQuestionAdd.value = questionResult;
-
-})
-
 /**
  * Hide questions section of signin page if visiting bakery checkbox is not checked.
  */
-
 window.onload = function() {
         $("#questionaire-set").hide();
         $("#contractor-section").hide();
@@ -51,9 +27,6 @@ $('input:radio[name="gridRadios"]').change(
             $("#visit-only-btn").hide();
             $("#confirmation-container").show();
             $("#answer-questions-warning").show();
-            $(".alert-msg").show();
-
-
             if (this.checked && this.value == 'true') {
                 top.location.href = "#questionaire-set"
             }
@@ -67,8 +40,6 @@ $('input:radio[name="gridRadios"]').change(
         }
     });
 
-
-
 /**
  * If checkbox is checked for visiting bakery then show the sign in button and move to the top of the page.
  */
@@ -78,5 +49,20 @@ $("#noticeCheckbox").click(function() {
         top.location.href = "#sign-in-container"
     } else {
         $("#visit-only-btn").hide();
+    }
+})
+
+/**
+ * Click event listener for option selected. if wrong value is selected then block messages and display alert message.
+ */
+
+$(".select-options").change(function() {
+    if (this[this.selectedIndex].value === "1") {
+        console.log("1 selected");
+        $(".select-options").prop("disabled", true);
+        $(".form-check-input").prop("disabled", true);
+        $(".alert-msg").show();
+    } else {
+        console.log("2 selected");
     }
 })
