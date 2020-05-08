@@ -23,13 +23,12 @@ users_table = MONGO.db.users
 
 @app.route("/")
 def home():
-    """
-    Renders page that user will see on first load.
-    """
+    """Renders page that user will see on first load."""
     return render_template("pages/main.html")
 
 @app.route("/admin/panel")
 def admin():
+    """Renders admin page after successful login."""
     return render_template("pages/admin.html")
 
 @app.route("/signin/visitor",methods=['GET','POST'])
@@ -56,9 +55,7 @@ def signin():
         
 @app.route("/edit/visitor",methods=['GET','POST'])
 def edit_visitor():
-    """
-    Renders page for editing visitors detail and posts changes back to the database.
-    """    
+    """Renders page for editing visitors detail and posts changes back to the database."""    
     if request.method == "POST":
         visitor_id = request.form.get("chooseName")
         update = visitor_table
@@ -75,9 +72,7 @@ def edit_visitor():
     
 @app.route("/delete/visitor",methods=['GET','POST'])
 def delete_visitor():
-    """ 
-    Renders delete page and allows deletion of visitor record 
-    """
+    """ Renders delete page and allows deletion of visitor record """
     if request.method == "POST":
         visitor_id = request.form.get("deleteName")
         visitor_table.remove({"_id": ObjectId(visitor_id)})
@@ -89,9 +84,7 @@ def delete_visitor():
 
 @app.route("/admin/login",methods=['GET','POST'])
 def adminlogin():
-    """ 
-    Admin render page, if correct credentials are entered page will load the admin panel to allow CRUD.
-    """
+    """ Admin render page, if correct credentials are entered page will load the admin panel to allow CRUD."""
     if request.method == "POST":
         users = users_table
         login_user = users.find_one({"username": request.form["username"]})
@@ -111,9 +104,7 @@ def adminlogin():
                               
 @app.route("/insert/new/company",methods=['GET','POST'])
 def add_company():
-    """ 
-    Renders page for inserting a new company and saves data into the database.
-    """
+    """ Renders page for inserting a new company and saves data into the database."""
     if request.method == "POST":
         company_doc = {"Name": request.form.get("newCompanyName"),
                    "Address": request.form.get("newCompanyAddress"),
@@ -125,9 +116,7 @@ def add_company():
 
 @app.route("/edit/company",methods=['GET','POST'])
 def edit_company():
-    """ 
-    Renders edit company page and saves amended data into the database.
-    """
+    """ Renders edit company page and saves amended data into the database."""
     if request.method == "POST":
         company_id = request.form.get("chooseCompany")
         update = contractor_table
@@ -143,9 +132,7 @@ def edit_company():
    
 @app.route("/delete/company",methods=['GET','POST'])
 def delete_company():
-    """ 
-    Renders delete company page and deletes record from database once submitted
-    """
+    """ Renders delete company page and deletes record from database once submitted"""
     if request.method == "POST":
         company_id = request.form.get("deleteCompany")
         contractor_table.remove({'_id': ObjectId(company_id)})
@@ -157,9 +144,7 @@ def delete_company():
 
 @app.route("/insert/question",methods=['GET','POST'])
 def insert_question():
-    """
-     Renders insert questions page and saves new values into database 
-    """
+    """Renders insert questions page and saves new values into database """
     if request.method == "POST":
         add_new_question = {"Question": request.form.get("newQuestionAdd"),
                         "Answer_First": request.form.get("newAnswerAdd"),
@@ -172,9 +157,7 @@ def insert_question():
                     
 @app.route("/edit/question",methods=['GET','POST'])
 def edit_question():
-    """ 
-    Renders edit questions page and saves updated values into database.
-    """
+    """  edit questions page and saves updated values into database."""
     if request.method == "POST":
         question_id = request.form.get("amendQuestion")
         update = question_table
@@ -192,9 +175,7 @@ def edit_question():
 
 @app.route("/delete/question",methods=['GET','POST'])
 def delete_question():
-    """ 
-    Renders delete question page and deletes question once submitted.
-     """
+    """ Renders delete question page and deletes question once submitted."""
     if request.method == "POST":
         question_id = request.form.get("removeQuestion")
         question_table.remove({"_id": ObjectId(question_id)})
@@ -216,9 +197,7 @@ def dash_load():
                               
 @app.route("/signout/visitor",methods=['GET','POST'])
 def sign_out():
-    """ 
-    Renders page for signing out visitor. Once visitor signs out a timestamp is added to DB 
-    """
+    """ Renders page for signing out visitor. Once visitor signs out a timestamp is added to DB """
 
     if request.method == "POST":
         visitor_id = request.form.get("signOutName")
