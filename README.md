@@ -384,19 +384,19 @@ Any features added were tested after implementation for this project. Any bugs t
 
 #### Logging into administrator page:
 
-* **Plan**
+* **Plan**<br>
 I wanted to create a secure login page so only authorised personnel can access the application to set up new companies, new questions as this contains sensitive data that general uses should not have access too.
 
-* **Implementation**
+* **Implementation**<br>
 Using mongoDB for the backend and bootstrap for the login form implementation was straightforward and simple to do.
 
-* **Test**
+* **Test**<br>
 To test this feature i had to check logging in with false credentials to check that the page doesn't access the administrator panel, or break, and also check that using the matching database table credentials that it does redirect successfully to the administrator page.
 
-* **Result**
+* **Result**<br>
 The test passed successfully withy no issues, the content displayed correctly and failed login attempts were being blocked successfully.
 
-* **Verdict**
+* **Verdict**<br>
 This test passed on the above criteria.
 
 
