@@ -154,7 +154,7 @@ body {
 }
 
 #questionaire-set {
-    background-color: #add8e6;
+    background-color: #42BFE0;
     border-style: groove;
 }
 
@@ -172,4 +172,8 @@ body {
     background-color: #0069A8;
     border-style: groove;
     color: #fafafa;
+}
+
+.form-questions {
+    padding-top: 20px;
 }
