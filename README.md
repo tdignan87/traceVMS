@@ -164,41 +164,41 @@ I feel the colours i have chosen have complimented eachother well and blend well
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during the scope part of the design and planning process for this project. I found Balsamiq very useful for helping me plan out exactly what i needed for my application to come together.
 
-To go to the main wireframes page please click [this](https://github.com/tdignan87/traceVMS/tree/master/Wireframes) link.
+To go to the main wireframes page please click [this](https://github.com/tdignan87/traceVMS/tree/master/wireframes) link.
 
 
-- [Browser Home Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Home%20Page.png)
-- [Browser Visitor Sign In Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Visitor%20Sign%20In.png)
-- [Browser Visitor Sign Out Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Visitor%20Sign%20Out%20Page.png)
-- [Browser Administrator Set Up Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Administrator%20Set%20Up.png)
-- [Browser Add New Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Add%20New%20Company.png)
-- [Browser Edit Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Edit%20Company.png)
-- [Browser Delete Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Delete%20Company.png)
-- [Browser Add Questions Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Add%20New%20Question.png)
-- [Browser Edit Questions Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Edit%20Question.png)
-- [Browser Delete Questions Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Browser%20Delete%20Questions.png)
-- [Mobile Home Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Home%20Page.png)
-- [Mobile Visitor Sign In Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Visitor%20Sign%20In%20Page.png)
-- [Mobile Visitor Sign Out Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Visitor%20Sign%20Out%20Page.png)
-- [Mobile Admin Set Up Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Admin%20Set%20Up.png)
-- [Mobile Visitor Edit Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Visitor%20Edit%20Page.png)
-- [Mobile Visitor Delete Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Visitor%20Delete%20Page.png)
-- [Mobile Company Add New](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Company%20Add%20New.png)
-- [Mobile Company Edit](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Company%20Edit.png)
-- [Mobile Company Delete](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Company%20Delete.png)
-- [Mobile Questions Add New](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Questions%20Add%20New.png)
-- [Mobile Questions Edit](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Questions%20Edit.png)
-- [Mobile Questions Delete](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Mobile%20Question%20Delete.png)
-- [Tablet Home Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Home%20Page.png)
-- [Tablet Visitor Sign In Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Visitor%20Sign%20In.png)
-- [Tablet Visitor Sign Out Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Visitor%20Sign%20Out.png)
-- [Tablet Administrator Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Administrator%20Page.png)
-- [Tablet Add New Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Add%20New%20Company.png)
+- [Browser Home Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-homepage.png)
+- [Browser Visitor Sign In Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-visitor-signin.png)
+- [Browser Visitor Sign Out Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-visitor-signout.png)
+- [Browser Administrator Set Up Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-admin-setup.png)
+- [Browser Add New Company Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-add-new-company.png)
+- [Browser Edit Company Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-edit-company.png)
+- [Browser Delete Company Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-delete-company.png)
+- [Browser Add Questions Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-add-new-question.png)
+- [Browser Edit Questions Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-edit-question.png)
+- [Browser Delete Questions Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/browser-delete-questions.png)
+- [Mobile Home Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-home-page.png)
+- [Mobile Visitor Sign In Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-visitor-signin-page.png)
+- [Mobile Visitor Sign Out Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-visitor-signout-page.png)
+- [Mobile Admin Set Up Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-admin-setup.png)
+- [Mobile Visitor Edit Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-visitor-edit-page.png)
+- [Mobile Visitor Delete Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-visitor-delete-page.png)
+- [Mobile Company Add New](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-company-addnew.png)
+- [Mobile Company Edit](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-company-edit.png)
+- [Mobile Company Delete](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-company-delete.png)
+- [Mobile Questions Add New](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-questions-addnew.png)
+- [Mobile Questions Edit](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-questions-edit.png)
+- [Mobile Questions Delete](https://github.com/tdignan87/traceVMS/blob/master/wireframes/mobile-visitor-delete-page.png)
+- [Tablet Home Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-home-page.png)
+- [Tablet Visitor Sign In Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-visitor-signin.png)
+- [Tablet Visitor Sign Out Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-visitor-signout.png)
+- [Tablet Administrator Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-admin-page.png)
+- [Tablet Add New Company Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-add-new-company.png)
 - [Tablet Edit Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Edit%20Company.png)
 - [Tablet Delete Company Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Delete%20Company.png)
-- [Tablet Add New Visitor Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Add%20New%20Visitor.png)
-- [Tablet Edit Visitor Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Edit%20Visitor.png)
-- [Tablet Delete Page](https://github.com/tdignan87/traceVMS/blob/master/Wireframes/Tablet%20Delete%20Visitor.png)
+- [Tablet Add New Visitor Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-add-new-visitor.png)
+- [Tablet Edit Visitor Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-edit-company.png)
+- [Tablet Delete Page](https://github.com/tdignan87/traceVMS/blob/master/wireframes/tablet-delete-visitor.png)
 
 ## Wireframe design changes
 
@@ -208,11 +208,11 @@ Throughout the design process i decided to move the logo from the top right and 
 
 This flowchart was created on Microsoft Powerpoint to explain the flow of how the application should run.<br>
 User flowchart:
-<img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/user-flowchart.png" target="_blank" rel=""/>
+<img src="https://github.com/tdignan87/traceVMS/blob/master/wireframes/flowchart/user-flowchart.png" target="_blank" rel=""/>
 
 
 Administrator options:
-<img src="https://github.com/tdignan87/traceVMS/blob/master/Wireframes/flowchart/admin_options.jpg" target="_blank" rel=""/>
+<img src="https://github.com/tdignan87/traceVMS/blob/master/wireframes/flowchart/admin_options.jpg" target="_blank" rel=""/>
 
 # Features
 
