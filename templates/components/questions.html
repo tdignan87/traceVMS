@@ -4,6 +4,7 @@
     <div class="alert-msg">
         {% include "components/alert.html" %}
     </div>
+    <h3 id="question-notice">Please answer questions below prior to entering site</h3>
     <div class="form-group " id="questions-asked">
         {% for question in av_questions %}
         <label for="questionsFormSelect {{question._id}}" class="header-pointers ">{{question.Question}}<span style="color:#ff0000"> *</span> </label>
