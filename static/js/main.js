@@ -13,12 +13,12 @@ $("#questions-asked").change(function() {
         $("#confirmation-container").hide();
         $("#visit-only-btn").hide();
         alert("Please consult site representative as you cannot enter the factory based on the value selected.");
-        $("#exampleFormControlSelect".disabled = true);
+        $(".select-options-visitor").prop("disabled", true);
 
     } else {
         console.log("Pass Selected");
         $("#confirmation-container").show();
-        $("#exampleFormControlSelect".disabled = false);
+        $(".select-options-visitor").prop("disabled", false);
     }
 })
 
