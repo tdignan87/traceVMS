@@ -50,6 +50,8 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 8. [Contact](#contact)
 
 9. [Disclamer](#disclamer)
+
+10. [Access Credentials](#access-credentials)
   
 
 ----
@@ -489,6 +491,9 @@ To contact me feel free to email me at tdignan87@gmail.com
 ## Disclamer
 The content of this website is for educational purposes only.
 
+## Access Credentials
+To access the admin panel the username is :  sysdba
+                                password: masterkey
 
 
 
