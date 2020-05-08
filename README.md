@@ -380,6 +380,24 @@ No issues were found apart from HTML validator flagging errors for the use of Ji
 Any features added were tested after implementation for this project. Any bugs that were identified were fixed during development. 
 
 
+### Feature Testing
+
+#### Logging into administrator page:
+
+* **Plan**
+
+
+* **Implementation**
+
+* **Test**
+
+* **Result**
+
+* **Verdict**
+
+
+
+
 # Deployment
 
 ## How to run this project locally
