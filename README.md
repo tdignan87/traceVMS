@@ -15,7 +15,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 ## Table of Contents
 1. [UX](#ux)
     - [Project Goals](#project-goals)
-    - [User Goals](#user-goals)
+    - [User Stories](#user-stores)
     - [Business Goals](#business-goals)
     - [Developer Goals](#developer-goals)
     - [User Requirements & Expectations](#customer-stories)
@@ -62,7 +62,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 The goal of this project is to create a suitable, easy to use application for recording visitors and contractors to your site. The software is aimed at food manufacturers specifically designed to help them be compliant with contractor management and also health and safety requirements. The system's focus will be ease of use for data input and data retrieve.
 
-## User Goals
+## User Stories:
 User goals are:
 
 - Have a system for recording visitors to my site so i can remove paperwork records.
@@ -151,8 +151,8 @@ traceVMS application has a professional feel that doesnt look too over complicat
 
 * The colors for this project were choosen based on the two primary colours in my company logo. These colours are
 
-1. Dark Blue: CMYK 100,50,10,0; RGB 0,105,68; HEX #0069A8
-2.Light Blue: CMYK 65,0,10,0; RGB 66,191,224; HEX #42BFE0
+- ![#0069A8](https://via.placeholder.com/15/f03c15/000000?text=+) `#0069A8`
+- ![#42BFE0](https://via.placeholder.com/15/c5f015/000000?text=+) `#42BFE0`
 
 The Dark Blue #0069A8 was used for button controls and blended well with etiher the lighter blue background or the white background depending where it was placed. The light blue was my jumbotron's background colior and background colour for the menu choices option. 
 
@@ -474,9 +474,7 @@ SECRET_KEY | `<your_secret_key>`
 The sub main logo was sourced at:
  - [securly](https://www.securly.com/visitor)
 
- The company main logo i had developed by Tom Holmes an independent graphics designer.
-
-- [Tom Holmes](http://www.tom-holmes.co.uk/?LMCL=zjuU4x)
+ The company main logo i had developed by [Tom Holmes](http://www.tom-holmes.co.uk/?LMCL=zjuU4x) an independent graphics designer.
 
 
 ## Acknowledgements
@@ -492,7 +490,7 @@ To contact me feel free to email me at tdignan87@gmail.com
 The content of this website is for educational purposes only.
 
 ## Access Credentials
-To access the admin panel the username is :  sysdba
+To access the admin panel the username is :  sysdba and 
                                 password: masterkey
 
 
