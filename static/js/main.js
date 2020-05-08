@@ -58,14 +58,13 @@ $("#noticeCheckbox").click(function() {
 
 $(".select-options").change(function() {
     if (this[this.selectedIndex].value === "1") {
-        console.log("1 selected");
         $(".select-options").prop("disabled", true);
         $("#confirmation-container").prop("disabled", true);
         $(".form-check-input").prop("disabled", true);
         $(".select-options").prop("checked", false);
         $(".alert-msg").show();
     } else {
-        console.log("2 selected");
+
     }
 })
 
@@ -74,8 +73,5 @@ $(".select-options").change(function() {
  */
 
 $(".exit-alert").click(function() {
-    $(".form-check-input").prop("disabled", false);
     $("#gridRadios2").prop("checked", true)
-    $(".select-options").prop("disabled", true);
-    $(".select-options").prop("checked", false);
 })
