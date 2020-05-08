@@ -39,19 +39,21 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 5. [Testing](#testing)
 
-6. [Deployment](#deployment)
+6.[Bugs](#bugs)
+
+7. [Deployment](#deployment)
     - [Heroku Deployment](#heroku-deployment)
     - [How to run this project locally](#how-to-run-this-project-locally)
 
-7. [Credits](#credits)
+8. [Credits](#credits)
     - [Content](#content)
     - [Acknowledgements](#acknowledgements)
 
-8. [Contact](#contact)
+9. [Contact](#contact)
 
-9. [Disclamer](#disclamer)
+10. [Disclamer](#disclamer)
 
-10. [Access Credentials](#access-credentials)
+11. [Access Credentials](#access-credentials)
   
 
 ----
@@ -359,6 +361,10 @@ Answer_Second | Answer_Second| text | string
 
 ### Languages
 The project uses HTML,CSS, Javascript and python programming languages.
+- [HTML](https://en.wikipedia.org/wiki/HTML5) to construct and render pages.
+- [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) to simplify displaying data from the backend of this project smoothly and effectively in html.
+- [Javascript](https://www.javascript.com/) to style the website fonts.
+
 
 # Testing
 
