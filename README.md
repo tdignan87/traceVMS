@@ -394,11 +394,29 @@ Using mongoDB for the backend and bootstrap for the login form implementation wa
 To test this feature i had to check logging in with false credentials to check that the page doesn't access the administrator panel, or break, and also check that using the matching database table credentials that it does redirect successfully to the administrator page.
 
 * **Result**<br>
-The test passed successfully withy no issues, the content displayed correctly and failed login attempts were being blocked successfully.
+The test passed successfully with no issues, the content displayed correctly and failed login attempts were being blocked successfully.
 
 * **Verdict**<br>
 This test passed on the above criteria.
 
+#### Dashboard display:
+
+* **Plan**<br>
+I wanted to create a page that shows which visitors are currently on site.
+
+* **Implementation**<br>
+Using mongoDB for the backend and bootstrap for the login form implementation was straightforward and simple to do based on a database query with Jinja.
+
+* **Test**<br>
+To test this i created the query using jinja then tested by booking in a visitor. I then checked the dashboard to check that it was indeed displaying the information. I signed the visitor out and then went back to the dashboard to see that it has been removed from the display.
+
+* **Result**<br>
+The test passed after ensuring the query was done successfully.
+
+* **Verdict**<br>
+This test passed on the above criteria.
+
+#### Answering a failed question criteria:
 
 
 # Deployment
