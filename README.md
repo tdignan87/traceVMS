@@ -118,9 +118,9 @@ As a customer to traceVMS i expect/want/need:
 
 3. I need to have sufficient confidence in the system so i can remove paperwork from my processes. The system needs to tick the box for storing the data, and for us to retrieve it if we get audited from the BRC or Health and Safety executive. 
 
-4.To use the administrator set up panel to be able to filter out on who is approved, not approved contractor and any other key information required.
+4. To use the administrator set up panel to be able to filter out on who is approved, not approved contractor and any other key information required.
 
-5.I want to be able to search for users who have completed the site induction.
+5. I want to be able to search for users who have completed the site induction.
 
 6. I want to be able to search for a list of everyone who is currently on site in case this needs to be printed in used in a fire evacuation emergency. I need to be able to print the list from the browser of the names of people on site. 
 
