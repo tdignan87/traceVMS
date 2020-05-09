@@ -421,6 +421,20 @@ This test passed on the above criteria.
 
 #### Answering a failed question criteria:
 
+* **Plan**<br>
+I wanted to restrict users from signing in if they select an answer that should prevent a user.
+
+* **Implementation**<br>
+Using Javascript to event listen for click events on the select options items.
+
+* **Test**<br>
+To test this i created a function that checks the select index for "FAIL" and if it matches that criteria to disable DOM elements on the page. This way, users who should not be given access are restricted and a alert warning should appear on the screen.
+
+* **Result**<br>
+The test passed after writing the javascript and testing on the browser.
+
+* **Verdict**<br>
+This test passed successfully.
 
 
 # Deployment
