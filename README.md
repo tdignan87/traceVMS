@@ -7,8 +7,11 @@
 
 ## Introduction
 
-TraceVMS was created by myself as I noticed through my day job that most factories and food companies use paper based systems for recording visitors to the site.
-I can see the headache of paper based systems from working in the manufacturing industry for over 10 years. TraceVMS hopes to help with that problem by recording visitor and contractor information to help with record keeping, reduce paperwork and adhere to food safety compliance(BRC).
+TraceVMS is an application used for booking contractors and visitors into your site. The application is tailored for the food industry and/or any high risk that requires specific compliance checks before allowing someone into those high risk areas. The system allows companies to add approved companies to the software and when any visitor is coming to the site if they are not on the approved list then they will not be booked in. The application also can ask specific questions to the visitor and depending on the answer can restrict them also from entering the site.
+
+The application can remove paperwork from your processes, improve compliance with audit requirements and help you maintain a safe site.
+
+
 
 Tracesense is my own company i created in November 2019 and decided to go with that name for the software although its purely created for educational purposes.
 
