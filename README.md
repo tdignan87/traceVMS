@@ -156,10 +156,10 @@ traceVMS application has a professional feel that doesnt look too over complicat
 
 * The colors for this project were choosen based on the two primary colours in my company logo. These colours are
 
-- ![#0069A8](https://via.placeholder.com/15/f03c15/000000?text=+) `#0069A8`
-- ![#42BFE0](https://via.placeholder.com/15/c5f015/000000?text=+) `#42BFE0`
+- ![#0069A8](https://via.placeholder.com/15/0069A8/000000?text=+) `#0069A8`
+- ![#42BFE0](https://via.placeholder.com/15/42BFE0/000000?text=+) `#42BFE0`
 
-The Dark Blue #0069A8 was used for button controls and blended well with etiher the lighter blue background or the white background depending where it was placed. The light blue was my jumbotron's background colior and background colour for the menu choices option. 
+Colour #0069A8 (Allports)was used for button controls and blended well with etiher the lighter blue background or the white background depending where it was placed. The light blue colour #42BFE0 (Picton Blue) was my jumbotron's background colour and background colour for the menu choices option. 
 
 I feel the colours i have chosen have complimented eachother well and blend well with the company logo.
 
