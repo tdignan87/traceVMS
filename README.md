@@ -449,6 +449,22 @@ The code that handles the selected index select function for the answers in the 
 * **Fix**<br>
 I was console logging the click events until i figured out i needed to use an event listener with jQuery that works for any option selected. I amended the jQuery and tested with console logs initially to check it was all working correctly for any option value selected.
 
+* **Verdict**<br>
+The bug was dealt with and i moved on once i figured it out.
+
+* **Bug**<br>
+JQuery prop method for setting the selected options to required if the radio button visiting the bakery is selected. If the radio button yes is selected, regardless of the jQuery the app will allow someone to sign into the site without answering any of the mandatory questions.
+
+* **Fix**<br>
+
+* **Verdict**<br>
+
+
+
+* **Bug**<br>
+
+
+
 
 
 
