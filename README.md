@@ -437,6 +437,21 @@ The test passed after writing the javascript and testing on the browser.
 This test passed successfully.
 
 
+#Bugs
+
+### Bugs During Development:
+During development i encountered a few bugs that proved a challenge for this project. The bugs i mainly encountered with with the front end features mainly using JS. 
+
+
+* **Bug**<br>
+The code that handles the selected index select function for the answers in the sign in page was only working for the first option that can be selected. If a user selected the first answer in any other question the if statement for the function was not working and stopping the user from continuing to fill in the form.
+
+* **Fix**<br>
+I was console logging the click events until i figured out i needed to use an event listener with jQuery that works for any option selected. I amended the jQuery and tested with console logs initially to check it was all working correctly for any option value selected.
+
+
+
+
 # Deployment
 
 ## How to run this project locally
