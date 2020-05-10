@@ -216,4 +216,4 @@ def sign_out():
 if __name__ == "__main__":
     APP.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
