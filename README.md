@@ -491,15 +491,23 @@ git clone https://github.com/tdignan87/traceVMS
 
 2. If possible open a terminal session in the unzip folder or cd to the correct location.
 
-3. A virtual environment is recommended for the Python interpreter, I recommend using Pythons built in virtual environment. Enter the command:
+3. A virtual environment is recommended for the Python interpreter, I used windows CMD for creating the virtual environment. Follow the instructions below:
+
 ```
-python -m .venv venv
+Create a directory on your machine and give the folder a name for the project.
+
+```
+Go to correct directory in cmd for the folder you created using the "cd" command.
+
+```
+Enter the below into the cmd
+py -m .venv env
 ```  
 _NOTE: Your Python command may differ, such as python3 or py_
 
-4. Activate the .venv with the command:
+4. Activate the .env with the command:
 ```
-.venv\Scripts\activate 
+.env\Scripts\activate 
 ```
 _Again this **command may differ depending on your operating system**, please check the [Python Documentation on virtual environments](https://docs.python.org/3/library/venv.html) for further instructions._
 
