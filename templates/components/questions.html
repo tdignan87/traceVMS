@@ -8,7 +8,7 @@
     <div class="form-group " id="questions-asked">
         {% for question in av_questions %}
         <label for="questionsFormSelect {{question._id}}" class="header-pointers ">{{question.Question}}<span style="color:#ff0000"> *</span> </label>
-        <select class="form-control select-options" id="questionsFormSelect {{question._id}}" required>
+        <select class="form-control select-options" id="questionsFormSelect {{question._id}}">
             <option value="" selected disabled >Please select</option>
             <option value="1">{{question.Answer_First}}</option>
             <option value="2">{{question.Answer_Second}}</option>
