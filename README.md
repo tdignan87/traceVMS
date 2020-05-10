@@ -511,12 +511,15 @@ _NOTE: Your Python command may differ, such as python3 or py_
 ```
 _Again this **command may differ depending on your operating system**, please check the [Python Documentation on virtual environments](https://docs.python.org/3/library/venv.html) for further instructions._
 
-4. If needed, Upgrade pip locally with
+5. If needed, Upgrade pip locally with
 ```
 pip install --upgrade pip.
-```
 
-5. Install all required modules with the command 
+6. Run the following command to install flask
+```
+pip install flask
+
+7. Install all required modules with the command 
 ```
 pip -r requirements.txt.
 ```
