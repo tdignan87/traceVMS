@@ -47,8 +47,11 @@ $("#noticeCheckbox").click(function() {
     if (confirmCheck.checked == true) {
         $("#visit-only-btn").show();
         top.location.href = "#sign-in-container"
+        $(".select-options").prop("required", true);
+
     } else {
         $("#visit-only-btn").hide();
+        $(".select-options").prop("required", false);
     }
 })
 
@@ -57,20 +60,19 @@ $("#noticeCheckbox").click(function() {
  */
 
 $(".select-options").change(function() {
-    if (this[this.selectedIndex].value === "1") {
-        $(".select-options").prop("disabled", true);
-        $("#confirmation-container").prop("disabled", true);
-        $(".form-check-input").prop("disabled", true);
-        $(".select-options").prop("checked", false);
-        $(".alert-msg").show();
-    } else {
+        if (this[this.selectedIndex].value === "1") {
+            $(".select-options").prop("disabled", true);
+            $("#confirmation-container").prop("disabled", true);
+            $(".form-check-input").prop("disabled", true);
+            $(".select-options").prop("checked", false);
+            $(".alert-msg").show();
+        } else {
 
-    }
-})
-
-/**
- * Once alert is closed then visiting bakery is set to No and checkbox is disabled 
- */
+        }
+    })
+    /**
+     * Once alert is closed then visiting bakery is set to No and checkbox is disabled 
+     */
 
 $(".exit-alert").click(function() {
     $("#gridRadios2").prop("checked", true)
