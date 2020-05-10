@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, url_for, request, redirect, flash,  session
+from flask import Flask, render_template, url_for, request, redirect,  session
 import bcrypt
 from flask_pymongo import PyMongo
 from datetime import datetime
@@ -94,7 +94,6 @@ def adminlogin():
                
                return redirect(url_for("admin"))
            else:
-               flash("Login failed please try again")
                return redirect(url_for("login"))
             
             
