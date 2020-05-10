@@ -42,7 +42,7 @@ Tracesense is my own company i created in November 2019 and decided to go with t
 
 5. [Testing](#testing)
 
-6.[Bugs](#bugs)
+6.[Bugs](#Bugs)
 
 7. [Deployment](#deployment)
     - [Heroku Deployment](#heroku-deployment)
@@ -437,7 +437,7 @@ The test passed after writing the javascript and testing on the browser.
 This test passed successfully.
 
 
-#Bugs
+# Bugs
 
 ### Bugs During Development:
 During development i encountered a few bugs that proved a challenge for this project. The bugs i mainly encountered with with the front end features mainly using JS. 
@@ -452,21 +452,16 @@ I was console logging the click events until i figured out i needed to use an ev
 * **Verdict**<br>
 The bug was dealt with and i moved on once i figured it out.
 
+
 * **Bug**<br>
 JQuery prop method for setting the selected options to required if the radio button visiting the bakery is selected. If the radio button yes is selected, regardless of the jQuery the app will allow someone to sign into the site without answering any of the mandatory questions.
 
 * **Fix**<br>
+I couldnt get this fixed. The jQuery method is correct and i have researched online the best way to look into this issue.
+
 
 * **Verdict**<br>
-
-
-
-* **Bug**<br>
-
-
-
-
-
+This issue is still open. I will re-visit it after my project has been re-assessed to fix it.
 
 # Deployment
 
