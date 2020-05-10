@@ -27,11 +27,13 @@ $('input:radio[name="gridRadios"]').change(
             $("#visit-only-btn").hide();
             $("#confirmation-container").show();
             $("#answer-questions-warning").show();
+            $(".select-options").prop("required", true);
             if (this.checked && this.value == 'true') {
                 top.location.href = "#questionaire-set"
             }
 
         } else {
+            $(".select-options").prop("required", false);
             $("#questionaire-set").hide();
             $("#contractor-section").hide();
             $("#visit-only-btn").show();
@@ -47,11 +49,10 @@ $("#noticeCheckbox").click(function() {
     if (confirmCheck.checked == true) {
         $("#visit-only-btn").show();
         top.location.href = "#sign-in-container"
-        $(".select-options").prop("required", true);
+
 
     } else {
         $("#visit-only-btn").hide();
-        $(".select-options").prop("required", false);
     }
 })
 
